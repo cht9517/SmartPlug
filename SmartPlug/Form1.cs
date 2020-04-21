@@ -88,5 +88,6 @@ namespace SmartPlug
                 button6.BackColor = Color.Transparent;
             }
         }
+
     }
 }
