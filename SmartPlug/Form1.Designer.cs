@@ -125,6 +125,8 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -143,17 +145,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.grpBoxCtrl = new System.Windows.Forms.GroupBox();
+            this.btn_CMD7 = new System.Windows.Forms.Button();
+            this.btn_CMD4 = new System.Windows.Forms.Button();
+            this.btn_CMD3 = new System.Windows.Forms.Button();
+            this.btn_CMD0 = new System.Windows.Forms.Button();
             this.btn_CMD5 = new System.Windows.Forms.Button();
             this.btn_CMD2 = new System.Windows.Forms.Button();
             this.btn_CMD1 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btn_CMD0 = new System.Windows.Forms.Button();
-            this.btn_CMD3 = new System.Windows.Forms.Button();
-            this.btn_CMD4 = new System.Windows.Forms.Button();
-            this.btn_CMD7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -207,6 +207,7 @@
             this.button7.TabIndex = 56;
             this.button7.Text = "模拟授权";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.Button7_Click);
             // 
             // button6
             // 
@@ -292,10 +293,10 @@
             this.tabPage2.Controls.Add(this.groupBox6);
             this.tabPage2.Controls.Add(this.groupBox5);
             this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(976, 629);
+            this.tabPage2.Size = new System.Drawing.Size(976, 636);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = " 仪 器 操作";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1021,9 +1022,11 @@
             chartArea1.AxisX.IsLabelAutoFit = false;
             chartArea1.AxisX.LabelAutoFitMaxFontSize = 12;
             chartArea1.AxisX.LabelAutoFitMinFontSize = 10;
+            chartArea1.AxisX.LabelStyle.Format = "HH:mm:ss";
+            chartArea1.AxisX.LabelStyle.Interval = 0D;
+            chartArea1.AxisX.LabelStyle.IntervalOffset = 0D;
             chartArea1.AxisX.Maximum = 100D;
             chartArea1.AxisX.MaximumAutoSize = 95F;
-            chartArea1.AxisX.Minimum = 0D;
             chartArea1.AxisY.LabelAutoFitMaxFontSize = 12;
             chartArea1.AxisY.LabelAutoFitMinFontSize = 10;
             chartArea1.AxisY.LabelStyle.Angle = 30;
@@ -1062,6 +1065,7 @@
             series1.LegendText = "上游压力";
             series1.Name = "Series1";
             series1.ToolTip = "压力1";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
             series2.BorderWidth = 2;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
@@ -1147,6 +1151,29 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "状态指示区";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "直接验封",
+            "低压测验证",
+            "高压侧验证",
+            "环腔试压验证"});
+            this.comboBox1.Location = new System.Drawing.Point(666, 55);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.TabIndex = 34;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button3.Location = new System.Drawing.Point(815, 49);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(113, 44);
+            this.button3.TabIndex = 33;
+            this.button3.Text = "开始验封";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // label17
             // 
@@ -1363,71 +1390,16 @@
             this.grpBoxCtrl.TabIndex = 6;
             this.grpBoxCtrl.TabStop = false;
             // 
-            // btn_CMD5
+            // btn_CMD7
             // 
-            this.btn_CMD5.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_CMD5.Location = new System.Drawing.Point(701, 25);
-            this.btn_CMD5.Name = "btn_CMD5";
-            this.btn_CMD5.Size = new System.Drawing.Size(113, 44);
-            this.btn_CMD5.TabIndex = 3;
-            this.btn_CMD5.Text = "环腔泄压";
-            this.btn_CMD5.UseVisualStyleBackColor = true;
-            this.btn_CMD5.Click += new System.EventHandler(this.Button5_Click);
-            // 
-            // btn_CMD2
-            // 
-            this.btn_CMD2.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_CMD2.Location = new System.Drawing.Point(293, 25);
-            this.btn_CMD2.Name = "btn_CMD2";
-            this.btn_CMD2.Size = new System.Drawing.Size(113, 44);
-            this.btn_CMD2.TabIndex = 2;
-            this.btn_CMD2.Text = "解封";
-            this.btn_CMD2.UseVisualStyleBackColor = true;
-            // 
-            // btn_CMD1
-            // 
-            this.btn_CMD1.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_CMD1.Location = new System.Drawing.Point(157, 25);
-            this.btn_CMD1.Name = "btn_CMD1";
-            this.btn_CMD1.Size = new System.Drawing.Size(113, 44);
-            this.btn_CMD1.TabIndex = 0;
-            this.btn_CMD1.Text = "坐封";
-            this.btn_CMD1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(976, 629);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = " 测 后 处 理 ";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
-            // 
-            // btn_CMD0
-            // 
-            this.btn_CMD0.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_CMD0.Location = new System.Drawing.Point(21, 25);
-            this.btn_CMD0.Name = "btn_CMD0";
-            this.btn_CMD0.Size = new System.Drawing.Size(113, 44);
-            this.btn_CMD0.TabIndex = 4;
-            this.btn_CMD0.Text = "测量参数";
-            this.btn_CMD0.UseVisualStyleBackColor = true;
-            // 
-            // btn_CMD3
-            // 
-            this.btn_CMD3.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_CMD3.Location = new System.Drawing.Point(429, 25);
-            this.btn_CMD3.Name = "btn_CMD3";
-            this.btn_CMD3.Size = new System.Drawing.Size(113, 44);
-            this.btn_CMD3.TabIndex = 5;
-            this.btn_CMD3.Text = "备用解封";
-            this.btn_CMD3.UseVisualStyleBackColor = true;
+            this.btn_CMD7.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_CMD7.Location = new System.Drawing.Point(837, 25);
+            this.btn_CMD7.Name = "btn_CMD7";
+            this.btn_CMD7.Size = new System.Drawing.Size(113, 44);
+            this.btn_CMD7.TabIndex = 7;
+            this.btn_CMD7.Text = "仪器休眠";
+            this.btn_CMD7.UseVisualStyleBackColor = true;
+            this.btn_CMD7.Click += new System.EventHandler(this.Btn_CMD7_Click);
             // 
             // btn_CMD4
             // 
@@ -1438,39 +1410,77 @@
             this.btn_CMD4.TabIndex = 6;
             this.btn_CMD4.Text = "环腔打压";
             this.btn_CMD4.UseVisualStyleBackColor = true;
+            this.btn_CMD4.Click += new System.EventHandler(this.Btn_CMD4_Click);
             // 
-            // btn_CMD7
+            // btn_CMD3
             // 
-            this.btn_CMD7.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_CMD7.Location = new System.Drawing.Point(837, 25);
-            this.btn_CMD7.Name = "btn_CMD7";
-            this.btn_CMD7.Size = new System.Drawing.Size(113, 44);
-            this.btn_CMD7.TabIndex = 7;
-            this.btn_CMD7.Text = "仪器休眠";
-            this.btn_CMD7.UseVisualStyleBackColor = true;
+            this.btn_CMD3.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_CMD3.Location = new System.Drawing.Point(429, 25);
+            this.btn_CMD3.Name = "btn_CMD3";
+            this.btn_CMD3.Size = new System.Drawing.Size(113, 44);
+            this.btn_CMD3.TabIndex = 5;
+            this.btn_CMD3.Text = "备用解封";
+            this.btn_CMD3.UseVisualStyleBackColor = true;
+            this.btn_CMD3.Click += new System.EventHandler(this.Btn_CMD3_Click);
             // 
-            // button3
+            // btn_CMD0
             // 
-            this.button3.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(815, 49);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 44);
-            this.button3.TabIndex = 33;
-            this.button3.Text = "开始验封";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_CMD0.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_CMD0.Location = new System.Drawing.Point(21, 25);
+            this.btn_CMD0.Name = "btn_CMD0";
+            this.btn_CMD0.Size = new System.Drawing.Size(113, 44);
+            this.btn_CMD0.TabIndex = 4;
+            this.btn_CMD0.Text = "测量参数";
+            this.btn_CMD0.UseVisualStyleBackColor = true;
+            this.btn_CMD0.Click += new System.EventHandler(this.Btn_CMD0_Click);
             // 
-            // comboBox1
+            // btn_CMD5
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "直接验封",
-            "低压测验证",
-            "高压侧验证",
-            "环腔试压验证"});
-            this.comboBox1.Location = new System.Drawing.Point(666, 55);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 34;
+            this.btn_CMD5.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_CMD5.Location = new System.Drawing.Point(701, 25);
+            this.btn_CMD5.Name = "btn_CMD5";
+            this.btn_CMD5.Size = new System.Drawing.Size(113, 44);
+            this.btn_CMD5.TabIndex = 3;
+            this.btn_CMD5.Text = "环腔泄压";
+            this.btn_CMD5.UseVisualStyleBackColor = true;
+            this.btn_CMD5.Click += new System.EventHandler(this.Btn_CMD5_Click);
+            // 
+            // btn_CMD2
+            // 
+            this.btn_CMD2.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_CMD2.Location = new System.Drawing.Point(293, 25);
+            this.btn_CMD2.Name = "btn_CMD2";
+            this.btn_CMD2.Size = new System.Drawing.Size(113, 44);
+            this.btn_CMD2.TabIndex = 2;
+            this.btn_CMD2.Text = "解封";
+            this.btn_CMD2.UseVisualStyleBackColor = true;
+            this.btn_CMD2.Click += new System.EventHandler(this.Btn_CMD2_Click);
+            // 
+            // btn_CMD1
+            // 
+            this.btn_CMD1.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_CMD1.Location = new System.Drawing.Point(157, 25);
+            this.btn_CMD1.Name = "btn_CMD1";
+            this.btn_CMD1.Size = new System.Drawing.Size(113, 44);
+            this.btn_CMD1.TabIndex = 0;
+            this.btn_CMD1.Text = "坐封";
+            this.btn_CMD1.UseVisualStyleBackColor = true;
+            this.btn_CMD1.Click += new System.EventHandler(this.Btn_CMD1_Click);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(976, 636);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = " 测 后 处 理 ";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // FrmMain
             // 

@@ -37,6 +37,8 @@ namespace SmartPlug
             InitializeComponent();
 
             Tsb.Instance.task_tsb_rx.Start();
+            Tsb_s.Instance.TSB_s_Rx += this.onTsb_s_Rx;
+            Tsb_s.Instance.task_tsb_rx.Start();
 
             dGv_test_para.Rows.Add(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
@@ -68,6 +70,10 @@ namespace SmartPlug
                     combo_PortSel[i].SelectedIndex = 0;
             }
 
+            chart1.Series[0].Points.AddXY(axis_X, 0);
+            chart1.Series[1].Points.AddXY(axis_X, 0);
+            chart1.Series[2].Points.AddXY(axis_X++, 0);
+
         }
 
         private void Btn_PortOpen_Click(object sender, EventArgs e)
@@ -80,7 +86,6 @@ namespace SmartPlug
                 {
                     Tsb.Instance.port_close();
 
-                    //Tsb.Instance.task_tsb_rx.Reset();
                     btn.Text = "打开";
                     btn.BackColor = Color.Gray;
                 }
@@ -338,5 +343,84 @@ namespace SmartPlug
         {
 
         }
+
+        private void Btn_CMD0_Click(object sender, EventArgs e)//测量参数
+        {
+            int cmd = 0x80;
+            if (Tsb_s.Instance.tsb_tx_frame(cmd))
+            {
+                MessageBox.Show("成功发送命令：" + cmd.ToString());
+            }
+            else
+                MessageBox.Show("命令发送失败！");
+        }
+
+        private void Btn_CMD1_Click(object sender, EventArgs e)//坐封
+        {
+            string cmd_name = "《坐封》";
+            string msg = "确定需要执行 " + cmd_name + "命令吗？";
+
+            if (MessageBox.Show(msg, "警告", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2) == DialogResult.OK)
+            {
+                int cmd = 0xE0;
+                if (Tsb_s.Instance.tsb_tx_frame(cmd))
+                {
+                    MessageBox.Show("成功发送命令：" + cmd.ToString());
+                }
+                else
+                    MessageBox.Show("命令发送失败！");
+            }
+        }
+
+        private void Btn_CMD2_Click(object sender, EventArgs e)//解封
+        {
+
+        }
+
+        private void Btn_CMD3_Click(object sender, EventArgs e)//备用解封
+        {
+
+        }
+
+        private void Btn_CMD4_Click(object sender, EventArgs e)//环腔打压
+        {
+
+        }
+
+        private void Btn_CMD5_Click(object sender, EventArgs e)//环腔泄压
+        {
+
+        }
+
+        private void Btn_CMD7_Click(object sender, EventArgs e)//仪器休眠
+        {
+
+        }
+
+
+        void onTsb_s_Rx(byte[] buf)
+        {
+            this.Invoke(new Action(() =>
+            {
+                textBox_S1.Text = string.Format("{0:f1}", buf[1] / 10.0);
+                textBox_P1.Text = string.Format("{0:f1}", buf[2] / 10.0);
+                textBox_P2.Text = string.Format("{0:f1}", buf[3] / 10.0);
+                textBox_P3.Text = string.Format("{0:f1}", buf[4] / 10.0);
+                //textBox_P1.Text = string.Format("{0:f1}", buf[2] / 10.0);
+
+                DateTime t = DateTime.Now;
+                chart1.Series[0].Points.AddXY(t.ToOADate(), buf[1] / 3.0);
+                chart1.Series[1].Points.AddXY(t.ToOADate(), buf[2] / 7.0);
+                chart1.Series[2].Points.AddXY(t.ToOADate(), buf[3] / 10.0);
+                chart1.ChartAreas[0].AxisX.Maximum = t.AddSeconds(100).ToOADate();
+                chart1.ChartAreas[0].AxisX.Minimum = t.ToOADate();
+                if (axis_X > chart1.ChartAreas[0].AxisX.Maximum)
+                {
+                    //chart1.ChartAreas[0].AxisX.Maximum += 50;
+                    //chart1.ChartAreas[0].AxisX.Minimum = chart1.ChartAreas[0].AxisX.Maximum - 100;
+                }
+            }));
+        }
+
     }
 }
