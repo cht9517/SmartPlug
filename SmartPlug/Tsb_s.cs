@@ -22,6 +22,8 @@ namespace SmartPlug
             remove { on_TSB_s_rx -= new TSB_s_Handler(value); }
         }
 
+        public Task task_tsb_rx = new Task(tsb_rx_thd);
+
         private static System.IO.Ports.SerialPort sPort = new System.IO.Ports.SerialPort("COM1", 19200, System.IO.Ports.Parity.None, dataBits: 8);
         private static byte[] rx_buf_o = new Byte[1050];
         private byte[] tx_buf_o = new Byte[1050];
@@ -34,7 +36,6 @@ namespace SmartPlug
         
         private static int rx_len = 0;
         private static int rx_msg_len = 0;
-        private static int rx_cmd_id = 0;
 
         public static bool tsb_rx_byte(byte dat)
         {
@@ -105,11 +106,6 @@ namespace SmartPlug
         }
 
 
-        private void tsb_tx_rx_dispose()
-        {
-
-        }
-
         public bool tsb_tx_frame(int cmd_id)
         {
             int len = 1; 
@@ -160,6 +156,8 @@ namespace SmartPlug
         private static int id_cnt = 0;
         private static void test_on_rx()
         {
+            Thread.Sleep(5000);
+
             for (int i = 0; i < 5; i++)
                 rx_msg_buf[i] = (byte)(id_cnt++ & 0xFF);
 
@@ -170,9 +168,9 @@ namespace SmartPlug
         {
             while (true)
             {
-                Thread.Sleep(1000);
+                Thread.Sleep(50);
 
-                test_on_rx();
+                //test_on_rx();
 
                 if (sPort.IsOpen)
                 {
@@ -196,7 +194,7 @@ namespace SmartPlug
         }
 
 
-        public Task task_tsb_rx = new Task(tsb_rx_thd);
+        
 
         public void port_open(string portName)
         {

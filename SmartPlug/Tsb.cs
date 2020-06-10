@@ -17,6 +17,7 @@ namespace SmartPlug
 
         public static tsb_callback[] tsb_cb_buf = new tsb_callback[257];
 
+        public Task task_tsb_rx = new Task(tsb_rx_thd);
 
         private static System.IO.Ports.SerialPort sPort = new System.IO.Ports.SerialPort("COM1", 19200, System.IO.Ports.Parity.None, dataBits: 8);
         private static byte[] rx_buf_o = new Byte[1050];
@@ -99,12 +100,6 @@ namespace SmartPlug
             }
 
             return false;
-        }
-
-
-        private void tsb_tx_rx_dispose()
-        {
-
         }
 
         public bool tsb_tx_frame(int tool_id, int cmd_id, byte[] buf,  tsb_callback cb)
@@ -219,8 +214,6 @@ namespace SmartPlug
             }
         }
 
-
-        public Task task_tsb_rx = new Task(tsb_rx_thd);
 
         public void port_open(string portName)
         {

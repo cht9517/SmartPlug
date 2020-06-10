@@ -8,61 +8,56 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Timers;
+using System.Speech.Synthesis;
 using System.Runtime.InteropServices;
-
+using System.Deployment.Internal.CodeSigning;
 
 
 namespace SmartPlug
 {
     public partial class FrmMain : Form
     {
-        private System.IO.Ports.SerialPort sPort1 = new System.IO.Ports.SerialPort("COM1", 19200, System.IO.Ports.Parity.None, dataBits: 8);
-        private System.IO.Ports.SerialPort sPort2 = new System.IO.Ports.SerialPort("COM1", 19200, System.IO.Ports.Parity.None, dataBits: 8);
-        private System.IO.Ports.SerialPort sPort3 = new System.IO.Ports.SerialPort("COM1", 19200, System.IO.Ports.Parity.None, dataBits: 8);
-        private System.IO.Ports.SerialPort sPort4 = new System.IO.Ports.SerialPort("COM1", 19200, System.IO.Ports.Parity.None, dataBits: 8);
 
-
-        List<System.IO.Ports.SerialPort> sPort = new List<System.IO.Ports.SerialPort>(4);
-        List<Button> btn_PortOpen = new List<Button>(4);
-        List<ComboBox> combo_PortSel = new List<ComboBox>(4);
+        Beacon beacon_up = new Beacon();
+        Beacon beacon_down = new Beacon();
 
         Random r1 = new Random();
-        int axis_X = 0;
-        double Press1 = 2;
-        double Press2 = 2;
-        double Press3 = 5;
+
+        bool anchor_OK = true;
 
         public FrmMain()
         {
             InitializeComponent();
 
             Tsb.Instance.task_tsb_rx.Start();
+
             Tsb_s.Instance.TSB_s_Rx += this.onTsb_s_Rx;
             Tsb_s.Instance.task_tsb_rx.Start();
 
+            beacon_up.Beacon_Rx += this.onBeacon_Rx_up;
+            beacon_down.Beacon_Rx += this.onBeacon_Rx_down;
+            beacon_up.StartWok();
+            beacon_down.StartWok();
+
+            timer1.Enabled = true;
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
             dGv_test_para.Rows.Add(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
             combo_testCMD.SelectedIndex = 0;
             combo_testCMD.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            btn_PortOpen.Add(btn_PortOpen1);
-            btn_PortOpen.Add(btn_PortOpen2);
-            btn_PortOpen.Add(btn_PortOpen3);
-            btn_PortOpen.Add(btn_PortOpen4);
+            string[] portList = System.IO.Ports.SerialPort.GetPortNames();
 
+            List<ComboBox> combo_PortSel = new List<ComboBox>(4);
             combo_PortSel.Add(combo_PortSel1);
             combo_PortSel.Add(combo_PortSel2);
             combo_PortSel.Add(combo_PortSel3);
             combo_PortSel.Add(combo_PortSel4);
 
-            sPort.Add(sPort1);
-            sPort.Add(sPort2);
-            sPort.Add(sPort3);
-            sPort.Add(sPort4);
-
-            string[] portList = System.IO.Ports.SerialPort.GetPortNames();
-
-            for(int i=0; i<4; i++)
+            for (int i = 0; i < 4; i++)
             {
                 combo_PortSel[i].Items.Clear();
                 combo_PortSel[i].Items.AddRange(portList);
@@ -70,122 +65,115 @@ namespace SmartPlug
                     combo_PortSel[i].SelectedIndex = 0;
             }
 
-            chart1.Series[0].Points.AddXY(axis_X, 0);
-            chart1.Series[1].Points.AddXY(axis_X, 0);
-            chart1.Series[2].Points.AddXY(axis_X++, 0);
+            tab.SelectedIndex = 2;//显示主界面
 
+            DateTime t = DateTime.Now;
+            chart1.Series[0].Points.AddXY(t.ToOADate(), 0);
+            chart1.Series[1].Points.AddXY(t.ToOADate(), 0);
+            chart1.Series[2].Points.AddXY(t.ToOADate(), 0);
+            chart1.ChartAreas[0].AxisX.Maximum = t.AddSeconds(0).ToOADate();
+            chart1.ChartAreas[0].AxisX.Minimum = t.AddSeconds(-600).ToOADate();
         }
 
         private void Btn_PortOpen_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
 
-            if(btn == btn_PortOpen[3])//TSB通信接口
-            {
-                if (Tsb.Instance.port_is_open())
-                {
-                    Tsb.Instance.port_close();
+            Beacon beacon = null;
+            ComboBox combobox = null;
 
-                    btn.Text = "打开";
-                    btn.BackColor = Color.Gray;
-                }
-                else
-                {
-                    if (combo_PortSel[3].Text != "")
-                    {
-                        try
-                        {
-                            Tsb.Instance.port_open(combo_PortSel[3].Text);
-                            btn.Text = "关闭";
-                            btn.BackColor = Color.Green;
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message, "串口输入错误");
-                        }
-                    }
-                }
+            if (btn.Equals(btn_PortOpen1))
+            {
+                beacon = beacon_up;
+                combobox = combo_PortSel1;
+            }
+            else if(btn.Equals(btn_PortOpen2))
+            {
+                beacon = beacon_down;
+                combobox = combo_PortSel2;
+            }
+
+
+            if (beacon.port_is_open())
+            {
+                beacon.port_close();
+
+                btn.Text = "打开";
+                btn.BackColor = Color.Gray;
             }
             else
             {
-                for (int i = 0; i < 3; i++)
+                if (combobox.Text != "")
                 {
-                    if (btn.Equals(btn_PortOpen[i]))
+                    try
                     {
-
-                        if (sPort[i].IsOpen)
-                        {
-                            sPort[i].Close();
-                            btn_PortOpen[i].Text = "打开";
-                            btn_PortOpen[i].BackColor = Color.Gray;
-                        }
-                        else
-                        {
-                            if (combo_PortSel[i].Text != "")
-                            {
-                                try
-                                {
-                                    sPort[i].PortName = combo_PortSel[i].Text;
-                                    sPort[i].Open();
-
-                                    btn_PortOpen[i].Text = "关闭";
-                                    btn_PortOpen[i].BackColor = Color.Green;
-                                }
-                                catch (Exception ex)
-                                {
-                                    MessageBox.Show(ex.Message, "串口输入错误");
-                                }
-
-                            }
-                        }
+                        beacon.port_open(combobox.Text);
+                        btn.Text = "关闭";
+                        btn.BackColor = Color.Green;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "串口输入错误");
                     }
                 }
             }
-            
         }
 
-
-        private void FrmMain_Load(object sender, EventArgs e)
+        private void btn_PortOpen3_Click(object sender, EventArgs e)
         {
-            tab.SelectedIndex = 2;
-        }
-
-        private void Timer1_Tick(object sender, EventArgs e)
-        {
-            
-            Press1 += (r1.Next(50) - 25) / 10.0;
-            Press2 += (r1.Next(50) - 25) / 10.0;
-            Press3 += (r1.Next(50) - 25) / 10.0;
-
-            if (Press1 < 0)
-                Press1 = 0;
-            if (Press2 < 0)
-                Press2 = 0;
-            if (Press3 < 0)
-                Press3 = 0;
-            if (Press1 > 25)
-                Press1 = 25;
-            if (Press2 > 25)
-                Press2 = 25;
-            if (Press3 > 25)
-                Press3 = 25;
-            chart1.Series[0].Points.AddXY(axis_X, Press1);
-            chart1.Series[1].Points.AddXY(axis_X, Press2);
-            chart1.Series[2].Points.AddXY(axis_X++, Press3);
-
-            if (axis_X > chart1.ChartAreas[0].AxisX.Maximum)
+            if (Tsb_s.Instance.port_is_open())
             {
-                chart1.ChartAreas[0].AxisX.Maximum += 50;
-                chart1.ChartAreas[0].AxisX.Minimum = chart1.ChartAreas[0].AxisX.Maximum - 100;
+                Tsb_s.Instance.port_close();
+
+                btn_PortOpen3.Text = "打开";
+                btn_PortOpen3.BackColor = Color.Gray;
             }
-
-
+            else
+            {
+                if (combo_PortSel3.Text != "")
+                {
+                    try
+                    {
+                        Tsb_s.Instance.port_open(combo_PortSel3.Text);
+                        btn_PortOpen3.Text = "关闭";
+                        btn_PortOpen3.BackColor = Color.Green;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "串口输入错误");
+                    }
+                }
+            }
         }
 
-        private void Button5_Click(object sender, EventArgs e)
+        private void btn_PortOpen4_Click(object sender, EventArgs e)
         {
-            timer1.Enabled = true;
+            if (Tsb.Instance.port_is_open())
+            {
+                Tsb.Instance.port_close();
+
+                btn_PortOpen4.Text = "打开";
+                btn_PortOpen4.BackColor = Color.Gray;
+            }
+            else
+            {
+                if (combo_PortSel4.Text != "")
+                {
+                    try
+                    {
+                        Tsb.Instance.port_open(combo_PortSel4.Text);
+                        btn_PortOpen4.Text = "关闭";
+                        btn_PortOpen4.BackColor = Color.Green;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "串口输入错误");
+                    }
+                }
+            }
         }
+
+
 
         private void Button7_Click(object sender, EventArgs e)
         {
@@ -202,24 +190,6 @@ namespace SmartPlug
                 button7.BackColor = Color.Transparent;
             }
         }
-
-        private void Button6_Click(object sender, EventArgs e)
-        {
-            if(button6.Text.Contains("模拟接收ELF"))
-            {
-                button6.Text = "暂停接收ELF";
-                timer1.Enabled = true;
-                button6.BackColor = Color.Green;
-            }
-            else
-            {
-                button6.Text = "模拟接收ELF";
-                timer1.Enabled = false;
-                button6.BackColor = Color.Transparent;
-            }
-        }
-
-
 
         private void Btn_testCMDSend_Click(object sender, EventArgs e)
         {
@@ -397,6 +367,12 @@ namespace SmartPlug
 
         }
 
+        private void sound_play(string msg)
+        {
+            SpeechSynthesizer ssh = new SpeechSynthesizer();
+            string content = msg;
+            ssh.Speak(content);
+        }
 
         void onTsb_s_Rx(byte[] buf)
         {
@@ -412,15 +388,93 @@ namespace SmartPlug
                 chart1.Series[0].Points.AddXY(t.ToOADate(), buf[1] / 3.0);
                 chart1.Series[1].Points.AddXY(t.ToOADate(), buf[2] / 7.0);
                 chart1.Series[2].Points.AddXY(t.ToOADate(), buf[3] / 10.0);
-                chart1.ChartAreas[0].AxisX.Maximum = t.AddSeconds(100).ToOADate();
-                chart1.ChartAreas[0].AxisX.Minimum = t.ToOADate();
-                if (axis_X > chart1.ChartAreas[0].AxisX.Maximum)
-                {
-                    //chart1.ChartAreas[0].AxisX.Maximum += 50;
-                    //chart1.ChartAreas[0].AxisX.Minimum = chart1.ChartAreas[0].AxisX.Maximum - 100;
-                }
+                chart1.ChartAreas[0].AxisX.Maximum = t.AddSeconds(0).ToOADate();
+                chart1.ChartAreas[0].AxisX.Minimum = t.AddSeconds(-600).ToOADate();
+
+                //System.Media.SystemSounds.Beep.Play();
+                Task.Run(() => sound_play("数据更新"));
             }));
         }
 
+        void onBeacon_Rx_up(byte[] buf)
+        {
+            this.Invoke(new Action(() =>
+            {
+                anchor_OK = true;
+
+                int rssi = (int)( ((buf[1] & 0xff) << 16) + ((buf[2] & 0xff) << 8) + (buf[3] & 0xff));
+
+                toolStripStatusLabel1.Text = string.Format("信号强度：{0:f1}dB", rssi / 1000.0);
+
+                toolStripProgressBar1.Value = 40;
+
+                toolStripStatusLabel2.Text = "锚定正常";
+                toolStripStatusLabel2.BackColor = Color.Chartreuse;
+
+                Task.Run(() => sound_play("锚定正常"));
+
+            }));
+        }
+
+        void onBeacon_Rx_down(byte[] buf)
+        {
+            this.Invoke(new Action(() =>
+            {
+                anchor_OK = false;
+
+                int rssi = (int)(((buf[1] & 0xff) << 16) + ((buf[2] & 0xff) << 8) + (buf[3] & 0xff));
+
+                toolStripStatusLabel1.Text = string.Format("信号强度：{0:f1}dB", rssi / 1000.0);
+
+                toolStripProgressBar1.Value = 0;
+
+                toolStripStatusLabel2.Text = "锚定异常";
+                toolStripStatusLabel2.BackColor = Color.Red;
+
+                Task.Run(() => sound_play("锚定异常!锚定异常!锚定异常!"));
+            }));
+        }
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            if(anchor_OK)
+            {
+                if (toolStripProgressBar1.Value > 0)
+                {
+                    toolStripProgressBar1.Value--;
+                    if(toolStripProgressBar1.Value == 0)
+                    {
+                        toolStripStatusLabel2.BackColor = Color.DarkOrange;
+                        toolStripStatusLabel2.Text = "信标丢失";
+
+                        Task.Run(() => sound_play("信标丢失！信标丢失！信标丢失！信标丢失！信标丢失！"));
+                    }
+                        
+                }
+            }
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            byte[] buf = new byte[5];
+            buf[1] = 0;
+            buf[2] = 0;
+            buf[3] = 23;
+            onBeacon_Rx_up(buf);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            byte[] buf = new byte[5];
+            buf[1] = 0;
+            buf[2] = 0;
+            buf[3] = 36;
+            onBeacon_Rx_down(buf);
+        }
     }
 }
