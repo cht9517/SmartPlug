@@ -11,12 +11,26 @@ using System.Timers;
 using System.Speech.Synthesis;
 using System.Runtime.InteropServices;
 using System.Deployment.Internal.CodeSigning;
-
+using System.Configuration;
+using System.IO;
 
 namespace SmartPlug
 {
     public partial class FrmMain : Form
     {
+        FileStream fs_log = null;
+        StreamWriter sw_log = null;
+
+        public const int CMD_MEASURE = 0x80;
+        public const int CMD_PLUG = 0xE0;
+        public const int CMD_PLUG_C = 0xE1;
+        public const int CMD_UNPLUG = 0xD0;
+        public const int CMD_UNPLUG_S = 0x88;
+        public const int CMD_RING_COMPRESS = 0xC4;
+        public const int CMD_RING_DECOMPRESS = 0x82;
+        public const int CMD_SLEEP = 0x00;
+
+        public byte[] Tool_Dat = new byte[15];
 
         Beacon beacon_up = new Beacon();
         Beacon beacon_down = new Beacon();
@@ -25,9 +39,15 @@ namespace SmartPlug
 
         bool anchor_OK = true;
 
+        SplashScreen splash = new SplashScreen();
+
         public FrmMain()
         {
             InitializeComponent();
+
+            splash.Show();
+            System.Threading.Thread.Sleep(3000);
+            splash.Close();
 
             Tsb.Instance.task_tsb_rx.Start();
 
@@ -40,6 +60,26 @@ namespace SmartPlug
             beacon_down.StartWok();
 
             timer1.Enabled = true;
+
+            string last_proj = ConfigurationManager.AppSettings["Last_Proj_Dir"];
+            
+            if(!Directory.Exists(last_proj))
+            {
+                textBox_lastProj.Text = "";
+                MessageBox.Show("工程文件导入失败，请手动选择打开工程或创建新工程！");
+            }
+            else
+            {
+                textBox_lastProj.Text = last_proj;
+
+                fs_log = new FileStream(last_proj + "/proj.log", FileMode.Append);
+                sw_log = new StreamWriter(fs_log, Encoding.Default);
+
+                sw_log.WriteLine("####################################################################");
+                log_info("打开工程");
+            }
+
+
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
@@ -74,6 +114,35 @@ namespace SmartPlug
             chart1.ChartAreas[0].AxisX.Maximum = t.AddSeconds(0).ToOADate();
             chart1.ChartAreas[0].AxisX.Minimum = t.AddSeconds(-600).ToOADate();
         }
+
+        private void btn_OpenProj_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            dialog.Description = "请选择文件路径";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                textBox_OpenProj.Text = dialog.SelectedPath;
+
+                var cfg = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None); //打开配置文件
+                cfg.AppSettings.Settings["Last_Proj_Dir"].Value = dialog.SelectedPath; ; //修改配置节
+                cfg.Save(); //保存
+                ConfigurationManager.RefreshSection("appSettings"); //更新缓存
+
+                fs_log = new FileStream(dialog.SelectedPath + "/proj.log", FileMode.Append);
+                sw_log = new StreamWriter(fs_log, Encoding.Default);
+                sw_log.WriteLine("####################################################################");
+                log_info("打开工程");
+            }
+        }
+
+        private void log_info(string info)
+        {
+            sw_log.WriteLine(string.Format("{0:G}", System.DateTime.Now) + "  " + info);
+
+            sw_log.Flush();
+        }
+
 
         private void Btn_PortOpen_Click(object sender, EventArgs e)
         {
@@ -175,25 +244,9 @@ namespace SmartPlug
 
 
 
-        private void Button7_Click(object sender, EventArgs e)
-        {
-            if(button7.Text.Contains("模拟授权"))
-            {
-                button7.Text = "解除授权";
-                grpBoxCtrl.Enabled = true;
-                button7.BackColor = Color.Red;
-            }
-            else
-            {
-                button7.Text = "模拟授权";
-                grpBoxCtrl.Enabled = false;
-                button7.BackColor = Color.Transparent;
-            }
-        }
-
         private void Btn_testCMDSend_Click(object sender, EventArgs e)
         {
-            byte[] code_buf = {0x80, 0xE0, 0xD0, 0x88, 0xC4, 0x82, 0x00};
+            byte[] code_buf = {0x80, 0xE0, 0xD0, 0x88, 0xC4, 0x82, 0x00, 0xF0};
 
             int index = combo_testCMD.SelectedIndex;
 
@@ -213,10 +266,6 @@ namespace SmartPlug
             {
 
             }
-
-
-
-
         }
 
         private void read_test_para_cb(int com_id)
@@ -224,8 +273,8 @@ namespace SmartPlug
             this.Invoke(new Action(() =>
             {
                 dGv_test_para.Rows[0].Cells[0].Value = string.Format("{0:X}", Tsb.rx_msg_buf[com_id, 8]);
-                dGv_test_para.Rows[0].Cells[1].Value = string.Format("{0:P0}", Tsb.rx_msg_buf[com_id, 9]);
-                for (int i = 2; i < 11; i++)
+                dGv_test_para.Rows[0].Cells[1].Value = string.Format("{0:f1}", Tsb.rx_msg_buf[com_id, 9]*1.0);
+                for (int i = 2; i < 10; i++)
                 {
                     byte val = Tsb.rx_msg_buf[com_id, i + 8];
                     float fval = val / 10.0f;
@@ -309,63 +358,155 @@ namespace SmartPlug
             MessageBox.Show("已下发时间：" + string.Format("{0:F}", System.DateTime.Now));
         }
 
-        private void Chart2_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void Btn_CMD0_Click(object sender, EventArgs e)//测量参数
+        private void CMD_Perform(int cmd, string cmd_name)
         {
-            int cmd = 0x80;
-            if (Tsb_s.Instance.tsb_tx_frame(cmd))
-            {
-                MessageBox.Show("成功发送命令：" + cmd.ToString());
-            }
-            else
-                MessageBox.Show("命令发送失败！");
-        }
-
-        private void Btn_CMD1_Click(object sender, EventArgs e)//坐封
-        {
-            string cmd_name = "《坐封》";
             string msg = "确定需要执行 " + cmd_name + "命令吗？";
 
             if (MessageBox.Show(msg, "警告", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2) == DialogResult.OK)
             {
-                int cmd = 0xE0;
+                log_info("执行命令：" + cmd_name);
+
                 if (Tsb_s.Instance.tsb_tx_frame(cmd))
                 {
-                    MessageBox.Show("成功发送命令：" + cmd.ToString());
+                    MessageBox.Show("成功发送命令：" + cmd_name);
+
+                    Status_Indicator_Switch(cmd);
+
+                    log_info("命令发送成功！");
                 }
                 else
+                {
                     MessageBox.Show("命令发送失败！");
+
+                    log_info("命令发送失败！");
+                }
             }
+        }
+
+        private void Btn_CMD0_Click(object sender, EventArgs e)//测量参数
+        {
+            CMD_Perform(CMD_MEASURE, "《测量参数》");
+        }
+
+        private void Btn_CMD1_Click(object sender, EventArgs e)//坐封
+        {
+            CMD_Perform(CMD_PLUG, "《坐封》");
         }
 
         private void Btn_CMD2_Click(object sender, EventArgs e)//解封
         {
-
+            CMD_Perform(CMD_UNPLUG, "《解封》");
         }
 
         private void Btn_CMD3_Click(object sender, EventArgs e)//备用解封
         {
-
+            CMD_Perform(CMD_UNPLUG_S, "《备用解封》");
         }
 
         private void Btn_CMD4_Click(object sender, EventArgs e)//环腔打压
         {
-
+            CMD_Perform(CMD_RING_COMPRESS, "《环腔打压》");
         }
 
         private void Btn_CMD5_Click(object sender, EventArgs e)//环腔泄压
         {
-
+            CMD_Perform(CMD_RING_DECOMPRESS, "《环腔泄压》");
         }
 
         private void Btn_CMD7_Click(object sender, EventArgs e)//仪器休眠
         {
-
+            CMD_Perform(CMD_SLEEP, "《仪器休眠》");
         }
+
+        private void Status_Indicator_Switch(int cmd)
+        {
+            Lb_SI1.BackColor = Color.White;
+            Lb_SI2.BackColor = Color.White;
+            Lb_SI3.BackColor = Color.White;
+            Lb_SI4.BackColor = Color.White;
+            Lb_SI5.BackColor = Color.White;
+
+            if (cmd == CMD_PLUG_C)//坐封完成
+            {
+                combo_CheckType.Visible = true;
+                btn_PlugCheck.Visible = true;
+            }
+            else
+            {
+                combo_CheckType.Visible = false;
+                btn_PlugCheck.Visible = false;
+            }
+
+            int Lb_pos_Y = Lb_SI1.Location.Y;
+            int Lb_pos_X = Lb_SI1.Location.X;
+
+            if (cmd == CMD_PLUG)
+            {
+                Lb_SI1.Text = "坐封指令";
+                Lb_SI2.Text = "收到指令";
+                Lb_SI3.Text = "系统压力建立";
+                Lb_SI4.Text = "执行完毕";
+                Lb_SI1.Location = new Point(Lb_pos_X, Lb_pos_Y);
+                Lb_SI2.Location = new Point(Lb_SI1.Location.X + Lb_SI1.Size.Width + 1, Lb_pos_Y);
+                Lb_SI3.Location = new Point(Lb_SI2.Location.X + Lb_SI2.Size.Width + 1, Lb_pos_Y);
+                Lb_SI4.Location = new Point(Lb_SI3.Location.X + Lb_SI3.Size.Width + 1, Lb_pos_Y);
+                Lb_SI1.BackColor = Color.Lime;
+                Lb_SI2.BackColor = Color.Silver;
+                Lb_SI3.BackColor = Color.Silver;
+                Lb_SI4.BackColor = Color.Silver;
+            }
+            else if(cmd == CMD_PLUG_C)//坐封完成、验封开始
+            {
+                Lb_SI1.Text = "直接验封法：";
+                Lb_SI2.Text = "P3>P1=P2";
+                Lb_SI3.Text = "等待5分钟";
+                Lb_SI4.Text = "P3>P1=P2";
+                Lb_SI1.Location = new Point(Lb_pos_X, Lb_pos_Y);
+                Lb_SI2.Location = new Point(Lb_SI1.Location.X + Lb_SI1.Size.Width + 1, Lb_pos_Y);
+                Lb_SI3.Location = new Point(Lb_SI2.Location.X + Lb_SI2.Size.Width + 1, Lb_pos_Y);
+                Lb_SI4.Location = new Point(Lb_SI3.Location.X + Lb_SI3.Size.Width + 1, Lb_pos_Y);
+                Lb_SI1.BackColor = Color.Lime;
+                if((Tool_Dat[6] > Tool_Dat[7]) && (Tool_Dat[6] > Tool_Dat[8]))
+                    Lb_SI2.BackColor = Color.Lime;
+                else
+                    Lb_SI2.BackColor = Color.Red;
+                Lb_SI3.BackColor = Color.Silver;
+                Lb_SI4.BackColor = Color.Silver;
+            }
+            else if(cmd == CMD_UNPLUG)
+            {
+                Lb_SI1.Text = "解封指令";
+                Lb_SI2.Text = "收到指令";
+                Lb_SI3.Text = "系统压力建立";
+                Lb_SI4.Text = "执行完毕";
+                Lb_SI1.Location = new Point(Lb_pos_X, Lb_pos_Y);
+                Lb_SI2.Location = new Point(Lb_SI1.Location.X + Lb_SI1.Size.Width + 1, Lb_pos_Y);
+                Lb_SI3.Location = new Point(Lb_SI2.Location.X + Lb_SI2.Size.Width + 1, Lb_pos_Y);
+                Lb_SI4.Location = new Point(Lb_SI3.Location.X + Lb_SI3.Size.Width + 1, Lb_pos_Y);
+                Lb_SI1.BackColor = Color.Lime;
+                Lb_SI2.BackColor = Color.Silver;
+                Lb_SI3.BackColor = Color.Silver;
+                Lb_SI4.BackColor = Color.Silver;
+            }
+            else if (cmd == CMD_UNPLUG_S)
+            {
+
+            }
+            else if (cmd == CMD_RING_COMPRESS)
+            {
+
+            }
+            else if (cmd == CMD_RING_DECOMPRESS)
+            {
+
+            }
+            else if (cmd == CMD_SLEEP)
+            {
+
+            }
+        }
+
 
         private void sound_play(string msg)
         {
@@ -378,16 +519,31 @@ namespace SmartPlug
         {
             this.Invoke(new Action(() =>
             {
-                textBox_S1.Text = string.Format("{0:f1}", buf[1] / 10.0);
-                textBox_P1.Text = string.Format("{0:f1}", buf[2] / 10.0);
-                textBox_P2.Text = string.Format("{0:f1}", buf[3] / 10.0);
-                textBox_P3.Text = string.Format("{0:f1}", buf[4] / 10.0);
-                //textBox_P1.Text = string.Format("{0:f1}", buf[2] / 10.0);
+                //buf[2]:Mode
+                textBox_S1.Text = string.Format("{0:f1}", buf[3] / 2.0);
+                textBox_P1.Text = string.Format("{0:f1}", buf[4] / 10.0);
+                textBox_P2.Text = string.Format("{0:f1}", buf[5] / 10.0);
+                textBox_P3.Text = string.Format("{0:f1}", buf[6] / 10.0);
+                textBox_P4.Text = string.Format("{0:f1}", buf[7] / 10.0);
+                textBox_P5.Text = string.Format("{0:f1}", buf[8] / 10.0);
+                textBox_P6.Text = string.Format("{0:f1}", buf[9] / 10.0);
+                
+
+                if ((buf[2] & 0xFE) == 0x80)//11bytes
+                {
+                    textBox_P7.Text = string.Format("{0:f1}", buf[10] / 10.0);
+                    textBox_VBAT.Text = string.Format("{0:f1}", buf[11] / 10.0);
+                    textBox_Temp.Text = string.Format("{0:f1}", buf[12] * 0.5);
+                }
+                else
+                {
+                    ;
+                }
 
                 DateTime t = DateTime.Now;
-                chart1.Series[0].Points.AddXY(t.ToOADate(), buf[1] / 3.0);
-                chart1.Series[1].Points.AddXY(t.ToOADate(), buf[2] / 7.0);
-                chart1.Series[2].Points.AddXY(t.ToOADate(), buf[3] / 10.0);
+                chart1.Series[0].Points.AddXY(t.ToOADate(), buf[7] / 10.0);
+                chart1.Series[1].Points.AddXY(t.ToOADate(), buf[8] / 10.0);
+                chart1.Series[2].Points.AddXY(t.ToOADate(), buf[9] / 10.0);
                 chart1.ChartAreas[0].AxisX.Maximum = t.AddSeconds(0).ToOADate();
                 chart1.ChartAreas[0].AxisX.Minimum = t.AddSeconds(-600).ToOADate();
 
@@ -475,6 +631,32 @@ namespace SmartPlug
             buf[2] = 0;
             buf[3] = 36;
             onBeacon_Rx_down(buf);
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Status_Indicator_Switch(CMD_PLUG_C);
+        }
+
+        private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("确定需要关闭软件吗？", "警告", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2) == DialogResult.OK)
+            {
+                if(fs_log != null)
+                {
+                    sw_log.Close();
+                    fs_log.Close();
+                }
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void Button7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

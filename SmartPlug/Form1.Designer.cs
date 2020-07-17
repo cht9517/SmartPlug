@@ -29,36 +29,34 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBox_lastProj = new System.Windows.Forms.TextBox();
+            this.textBox_OpenProj = new System.Windows.Forms.TextBox();
+            this.btn_OpenProj = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.combo_PortSel3 = new System.Windows.Forms.ComboBox();
@@ -126,31 +124,13 @@
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.combo_CheckType = new System.Windows.Forms.ComboBox();
+            this.btn_PlugCheck = new System.Windows.Forms.Button();
+            this.Lb_SI4 = new System.Windows.Forms.Label();
+            this.Lb_SI3 = new System.Windows.Forms.Label();
+            this.Lb_SI2 = new System.Windows.Forms.Label();
+            this.Lb_SI1 = new System.Windows.Forms.Label();
+            this.Lb_SI5 = new System.Windows.Forms.Label();
             this.grpBoxCtrl = new System.Windows.Forms.GroupBox();
             this.btn_CMD7 = new System.Windows.Forms.Button();
             this.btn_CMD4 = new System.Windows.Forms.Button();
@@ -161,6 +141,13 @@
             this.btn_CMD1 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.textBox_VBAT = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox_Temp = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -195,17 +182,27 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button7);
             this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(976, 626);
+            this.tabPage1.Size = new System.Drawing.Size(976, 629);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = " 软 件 设 置 ";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(719, 427);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(164, 32);
+            this.button3.TabIndex = 59;
+            this.button3.Text = "模拟坐封完成";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button4
             // 
@@ -227,28 +224,16 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(719, 262);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(164, 32);
-            this.button7.TabIndex = 56;
-            this.button7.Text = "模拟授权";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.Button7_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.button10);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.textBox_lastProj);
+            this.groupBox2.Controls.Add(this.textBox_OpenProj);
+            this.groupBox2.Controls.Add(this.btn_OpenProj);
             this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.groupBox2.Location = new System.Drawing.Point(3, 19);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(970, 160);
+            this.groupBox2.Size = new System.Drawing.Size(970, 121);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "存档设置";
@@ -256,65 +241,51 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 28);
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(16, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 27);
+            this.label1.Size = new System.Drawing.Size(127, 22);
             this.label1.TabIndex = 5;
-            this.label1.Text = "打开上次工程:";
+            this.label1.Text = "已打开上次工程:";
             // 
-            // textBox3
+            // textBox_lastProj
             // 
-            this.textBox3.Location = new System.Drawing.Point(149, 25);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(681, 34);
-            this.textBox3.TabIndex = 4;
-            this.textBox3.Text = "H:\\MyProject\\SmartPlug";
+            this.textBox_lastProj.Location = new System.Drawing.Point(149, 25);
+            this.textBox_lastProj.Name = "textBox_lastProj";
+            this.textBox_lastProj.ReadOnly = true;
+            this.textBox_lastProj.Size = new System.Drawing.Size(681, 29);
+            this.textBox_lastProj.TabIndex = 4;
+            this.textBox_lastProj.Text = "H:\\MyProject\\SmartPlug";
             // 
-            // textBox2
+            // textBox_OpenProj
             // 
-            this.textBox2.Location = new System.Drawing.Point(149, 72);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(681, 34);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.Text = "打开一个已有工程项目，并追加写入文档资料。";
+            this.textBox_OpenProj.Location = new System.Drawing.Point(149, 72);
+            this.textBox_OpenProj.Name = "textBox_OpenProj";
+            this.textBox_OpenProj.ReadOnly = true;
+            this.textBox_OpenProj.Size = new System.Drawing.Size(681, 29);
+            this.textBox_OpenProj.TabIndex = 3;
+            this.textBox_OpenProj.Text = "选择并打开一个文件夹，如果有工程文件则追加写入，否则新建工程记录文件";
             // 
-            // button10
+            // btn_OpenProj
             // 
-            this.button10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button10.Location = new System.Drawing.Point(34, 67);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(87, 31);
-            this.button10.TabIndex = 2;
-            this.button10.Text = "打开工程";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(149, 117);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(681, 34);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "新建工程项目，并选择一个新的存盘路径以保存资料。";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(34, 112);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 31);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "新建工程";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_OpenProj.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_OpenProj.Location = new System.Drawing.Point(20, 71);
+            this.btn_OpenProj.Name = "btn_OpenProj";
+            this.btn_OpenProj.Size = new System.Drawing.Size(123, 31);
+            this.btn_OpenProj.TabIndex = 2;
+            this.btn_OpenProj.Text = "打开/新建工程";
+            this.btn_OpenProj.UseVisualStyleBackColor = true;
+            this.btn_OpenProj.Click += new System.EventHandler(this.btn_OpenProj_Click);
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox6);
             this.tabPage2.Controls.Add(this.groupBox5);
             this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 32);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(976, 626);
+            this.tabPage2.Size = new System.Drawing.Size(976, 629);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = " 仪 器 操作";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -338,7 +309,7 @@
             this.combo_PortSel3.Location = new System.Drawing.Point(158, 47);
             this.combo_PortSel3.Margin = new System.Windows.Forms.Padding(4);
             this.combo_PortSel3.Name = "combo_PortSel3";
-            this.combo_PortSel3.Size = new System.Drawing.Size(72, 35);
+            this.combo_PortSel3.Size = new System.Drawing.Size(72, 30);
             this.combo_PortSel3.TabIndex = 55;
             // 
             // btn_PortOpen3
@@ -358,7 +329,7 @@
             this.label52.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label52.Location = new System.Drawing.Point(0, 47);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(192, 27);
+            this.label52.Size = new System.Drawing.Size(154, 21);
             this.label52.TabIndex = 53;
             this.label52.Text = "管外通信单元串口：";
             // 
@@ -384,7 +355,7 @@
             this.combo_PortSel2.Location = new System.Drawing.Point(158, 95);
             this.combo_PortSel2.Margin = new System.Windows.Forms.Padding(4);
             this.combo_PortSel2.Name = "combo_PortSel2";
-            this.combo_PortSel2.Size = new System.Drawing.Size(72, 35);
+            this.combo_PortSel2.Size = new System.Drawing.Size(72, 30);
             this.combo_PortSel2.TabIndex = 57;
             // 
             // combo_PortSel1
@@ -393,7 +364,7 @@
             this.combo_PortSel1.Location = new System.Drawing.Point(158, 37);
             this.combo_PortSel1.Margin = new System.Windows.Forms.Padding(4);
             this.combo_PortSel1.Name = "combo_PortSel1";
-            this.combo_PortSel1.Size = new System.Drawing.Size(72, 35);
+            this.combo_PortSel1.Size = new System.Drawing.Size(72, 30);
             this.combo_PortSel1.TabIndex = 56;
             // 
             // btn_PortOpen2
@@ -413,7 +384,7 @@
             this.label51.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label51.Location = new System.Drawing.Point(15, 97);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(172, 27);
+            this.label51.Size = new System.Drawing.Size(138, 21);
             this.label51.TabIndex = 54;
             this.label51.Text = "下游信标盒串口：";
             // 
@@ -434,7 +405,7 @@
             this.label2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.Location = new System.Drawing.Point(15, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 27);
+            this.label2.Size = new System.Drawing.Size(138, 21);
             this.label2.TabIndex = 52;
             this.label2.Text = "上游信标盒串口：";
             // 
@@ -469,6 +440,7 @@
             this.btn_testFileClear.TabIndex = 66;
             this.btn_testFileClear.Text = "存盘文件清空";
             this.btn_testFileClear.UseVisualStyleBackColor = true;
+            this.btn_testFileClear.Visible = false;
             // 
             // btn_testAutoUpdate
             // 
@@ -500,24 +472,24 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.Format = "N4";
-            dataGridViewCellStyle12.NullValue = null;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGv_test_para.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle38.Format = "N4";
+            dataGridViewCellStyle38.NullValue = null;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGv_test_para.DefaultCellStyle = dataGridViewCellStyle38;
             this.dGv_test_para.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
             this.dGv_test_para.Location = new System.Drawing.Point(31, 205);
             this.dGv_test_para.Name = "dGv_test_para";
             this.dGv_test_para.RowHeadersVisible = false;
             this.dGv_test_para.RowHeadersWidth = 20;
             this.dGv_test_para.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dGv_test_para.RowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dGv_test_para.RowsDefaultCellStyle = dataGridViewCellStyle39;
             this.dGv_test_para.RowTemplate.Height = 23;
             this.dGv_test_para.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dGv_test_para.ShowCellErrors = false;
@@ -530,9 +502,9 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle1.Format = "N0";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle27.Format = "N0";
+            dataGridViewCellStyle27.NullValue = null;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridViewTextBoxColumn1.HeaderText = "工作模式";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -543,9 +515,9 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewCellStyle2.Format = "N0";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle28.Format = "N0";
+            dataGridViewCellStyle28.NullValue = null;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridViewTextBoxColumn2.HeaderText = "油缸位置";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
@@ -555,9 +527,9 @@
             // 
             // dataGridViewTextBoxColumn3
             // 
-            dataGridViewCellStyle3.Format = "N1";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle29.Format = "N1";
+            dataGridViewCellStyle29.NullValue = null;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle29;
             this.dataGridViewTextBoxColumn3.HeaderText = "压力1";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
@@ -567,8 +539,8 @@
             // 
             // dataGridViewTextBoxColumn4
             // 
-            dataGridViewCellStyle4.Format = "N1";
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle30.Format = "N1";
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle30;
             this.dataGridViewTextBoxColumn4.HeaderText = "压力2";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
@@ -578,8 +550,8 @@
             // 
             // dataGridViewTextBoxColumn5
             // 
-            dataGridViewCellStyle5.Format = "N1";
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle31.Format = "N1";
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle31;
             this.dataGridViewTextBoxColumn5.HeaderText = "压力3";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
@@ -589,8 +561,8 @@
             // 
             // dataGridViewTextBoxColumn6
             // 
-            dataGridViewCellStyle6.Format = "N1";
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle32.Format = "N1";
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle32;
             this.dataGridViewTextBoxColumn6.HeaderText = "压力4";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
@@ -600,8 +572,8 @@
             // 
             // dataGridViewTextBoxColumn7
             // 
-            dataGridViewCellStyle7.Format = "N1";
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle33.Format = "N1";
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle33;
             this.dataGridViewTextBoxColumn7.HeaderText = "压力5";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
@@ -611,8 +583,8 @@
             // 
             // dataGridViewTextBoxColumn8
             // 
-            dataGridViewCellStyle8.Format = "N1";
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle34.Format = "N1";
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle34;
             this.dataGridViewTextBoxColumn8.HeaderText = "压力6";
             this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
@@ -622,8 +594,8 @@
             // 
             // dataGridViewTextBoxColumn9
             // 
-            dataGridViewCellStyle9.Format = "N1";
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle35.Format = "N1";
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle35;
             this.dataGridViewTextBoxColumn9.HeaderText = "压力7";
             this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
@@ -633,8 +605,8 @@
             // 
             // dataGridViewTextBoxColumn10
             // 
-            dataGridViewCellStyle10.Format = "N1";
-            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle36.Format = "N1";
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle36;
             this.dataGridViewTextBoxColumn10.HeaderText = "电池";
             this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
@@ -644,8 +616,8 @@
             // 
             // dataGridViewTextBoxColumn11
             // 
-            dataGridViewCellStyle11.Format = "N1";
-            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle37.Format = "N1";
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle37;
             this.dataGridViewTextBoxColumn11.HeaderText = "温度";
             this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
@@ -670,7 +642,7 @@
             this.label53.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label53.Location = new System.Drawing.Point(29, 36);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(152, 27);
+            this.label53.Size = new System.Drawing.Size(122, 21);
             this.label53.TabIndex = 54;
             this.label53.Text = "测试通信串口：";
             // 
@@ -713,7 +685,7 @@
             this.combo_PortSel4.Location = new System.Drawing.Point(158, 29);
             this.combo_PortSel4.Margin = new System.Windows.Forms.Padding(4);
             this.combo_PortSel4.Name = "combo_PortSel4";
-            this.combo_PortSel4.Size = new System.Drawing.Size(72, 35);
+            this.combo_PortSel4.Size = new System.Drawing.Size(72, 30);
             this.combo_PortSel4.TabIndex = 56;
             // 
             // combo_testCMD
@@ -726,11 +698,12 @@
             "应急解封",
             "环腔升压",
             "环腔泄压",
-            "仪器休眠"});
+            "仪器休眠",
+            "坐封步进"});
             this.combo_testCMD.Location = new System.Drawing.Point(126, 76);
             this.combo_testCMD.Margin = new System.Windows.Forms.Padding(4);
             this.combo_testCMD.Name = "combo_testCMD";
-            this.combo_testCMD.Size = new System.Drawing.Size(104, 35);
+            this.combo_testCMD.Size = new System.Drawing.Size(104, 30);
             this.combo_testCMD.TabIndex = 58;
             // 
             // label54
@@ -739,7 +712,7 @@
             this.label54.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label54.Location = new System.Drawing.Point(29, 78);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(112, 27);
+            this.label54.Size = new System.Drawing.Size(90, 21);
             this.label54.TabIndex = 57;
             this.label54.Text = "指令选择：";
             // 
@@ -749,9 +722,9 @@
             this.tabPage3.Controls.Add(this.statusStrip1);
             this.tabPage3.Controls.Add(this.groupBox1);
             this.tabPage3.Controls.Add(this.grpBoxCtrl);
-            this.tabPage3.Location = new System.Drawing.Point(4, 32);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(976, 626);
+            this.tabPage3.Size = new System.Drawing.Size(976, 629);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = " 主 工 作 区 ";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -759,13 +732,19 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 254);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 171);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
+            this.splitContainer1.Panel1.Controls.Add(this.textBox_Temp);
+            this.splitContainer1.Panel1.Controls.Add(this.label5);
+            this.splitContainer1.Panel1.Controls.Add(this.label6);
+            this.splitContainer1.Panel1.Controls.Add(this.textBox_VBAT);
+            this.splitContainer1.Panel1.Controls.Add(this.label3);
+            this.splitContainer1.Panel1.Controls.Add(this.label4);
             this.splitContainer1.Panel1.Controls.Add(this.textBox_P7);
             this.splitContainer1.Panel1.Controls.Add(this.textBox_P3);
             this.splitContainer1.Panel1.Controls.Add(this.textBox_P2);
@@ -794,97 +773,97 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.chart1);
-            this.splitContainer1.Size = new System.Drawing.Size(976, 347);
-            this.splitContainer1.SplitterDistance = 154;
+            this.splitContainer1.Size = new System.Drawing.Size(976, 433);
+            this.splitContainer1.SplitterDistance = 151;
             this.splitContainer1.TabIndex = 9;
             // 
             // textBox_P7
             // 
             this.textBox_P7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_P7.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox_P7.Location = new System.Drawing.Point(839, 100);
+            this.textBox_P7.Location = new System.Drawing.Point(837, 101);
             this.textBox_P7.Name = "textBox_P7";
-            this.textBox_P7.Size = new System.Drawing.Size(50, 34);
+            this.textBox_P7.ReadOnly = true;
+            this.textBox_P7.Size = new System.Drawing.Size(50, 29);
             this.textBox_P7.TabIndex = 23;
-            this.textBox_P7.Text = "3.2";
             // 
             // textBox_P3
             // 
             this.textBox_P3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_P3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox_P3.Location = new System.Drawing.Point(839, 62);
+            this.textBox_P3.Location = new System.Drawing.Point(120, 97);
             this.textBox_P3.Name = "textBox_P3";
-            this.textBox_P3.Size = new System.Drawing.Size(50, 34);
+            this.textBox_P3.ReadOnly = true;
+            this.textBox_P3.Size = new System.Drawing.Size(50, 29);
             this.textBox_P3.TabIndex = 22;
-            this.textBox_P3.Text = "20.8";
             // 
             // textBox_P2
             // 
             this.textBox_P2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_P2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox_P2.Location = new System.Drawing.Point(113, 105);
+            this.textBox_P2.Location = new System.Drawing.Point(120, 62);
             this.textBox_P2.Name = "textBox_P2";
-            this.textBox_P2.Size = new System.Drawing.Size(50, 34);
+            this.textBox_P2.ReadOnly = true;
+            this.textBox_P2.Size = new System.Drawing.Size(50, 29);
             this.textBox_P2.TabIndex = 21;
-            this.textBox_P2.Text = "13.8";
             // 
             // textBox_P1
             // 
             this.textBox_P1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_P1.ForeColor = System.Drawing.Color.Black;
-            this.textBox_P1.Location = new System.Drawing.Point(112, 69);
+            this.textBox_P1.Location = new System.Drawing.Point(120, 26);
             this.textBox_P1.Name = "textBox_P1";
-            this.textBox_P1.Size = new System.Drawing.Size(50, 34);
+            this.textBox_P1.ReadOnly = true;
+            this.textBox_P1.Size = new System.Drawing.Size(50, 29);
             this.textBox_P1.TabIndex = 20;
-            this.textBox_P1.Text = "5.7";
             // 
             // textBox_P6
             // 
             this.textBox_P6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_P6.ForeColor = System.Drawing.Color.Blue;
-            this.textBox_P6.Location = new System.Drawing.Point(546, 97);
+            this.textBox_P6.Location = new System.Drawing.Point(561, 97);
             this.textBox_P6.Name = "textBox_P6";
-            this.textBox_P6.Size = new System.Drawing.Size(50, 34);
+            this.textBox_P6.ReadOnly = true;
+            this.textBox_P6.Size = new System.Drawing.Size(50, 29);
             this.textBox_P6.TabIndex = 19;
-            this.textBox_P6.Text = "3.2";
             // 
             // textBox_P4
             // 
             this.textBox_P4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_P4.ForeColor = System.Drawing.Color.Lime;
-            this.textBox_P4.Location = new System.Drawing.Point(422, 97);
+            this.textBox_P4.Location = new System.Drawing.Point(437, 97);
             this.textBox_P4.Name = "textBox_P4";
-            this.textBox_P4.Size = new System.Drawing.Size(50, 34);
+            this.textBox_P4.ReadOnly = true;
+            this.textBox_P4.Size = new System.Drawing.Size(50, 29);
             this.textBox_P4.TabIndex = 18;
-            this.textBox_P4.Text = "20.8";
             // 
             // textBox_P5
             // 
             this.textBox_P5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_P5.ForeColor = System.Drawing.Color.Magenta;
-            this.textBox_P5.Location = new System.Drawing.Point(296, 100);
+            this.textBox_P5.Location = new System.Drawing.Point(311, 100);
             this.textBox_P5.Name = "textBox_P5";
-            this.textBox_P5.Size = new System.Drawing.Size(50, 34);
+            this.textBox_P5.ReadOnly = true;
+            this.textBox_P5.Size = new System.Drawing.Size(50, 29);
             this.textBox_P5.TabIndex = 17;
-            this.textBox_P5.Text = "13.8";
             // 
             // textBox_S1
             // 
             this.textBox_S1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_S1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox_S1.Location = new System.Drawing.Point(112, 34);
+            this.textBox_S1.Location = new System.Drawing.Point(437, 23);
             this.textBox_S1.Name = "textBox_S1";
-            this.textBox_S1.Size = new System.Drawing.Size(50, 34);
+            this.textBox_S1.ReadOnly = true;
+            this.textBox_S1.Size = new System.Drawing.Size(50, 29);
             this.textBox_S1.TabIndex = 16;
-            this.textBox_S1.Text = "5.7";
             // 
             // label47
             // 
             this.label47.AutoSize = true;
             this.label47.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label47.Location = new System.Drawing.Point(895, 103);
+            this.label47.Location = new System.Drawing.Point(890, 104);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(58, 27);
+            this.label47.Size = new System.Drawing.Size(46, 22);
             this.label47.TabIndex = 15;
             this.label47.Text = "Mpa";
             // 
@@ -892,9 +871,9 @@
             // 
             this.label48.AutoSize = true;
             this.label48.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label48.Location = new System.Drawing.Point(765, 103);
+            this.label48.Location = new System.Drawing.Point(763, 104);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(84, 27);
+            this.label48.Size = new System.Drawing.Size(68, 22);
             this.label48.TabIndex = 14;
             this.label48.Text = "压力7：";
             // 
@@ -903,9 +882,9 @@
             this.label49.AutoSize = true;
             this.label49.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label49.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label49.Location = new System.Drawing.Point(168, 37);
+            this.label49.Location = new System.Drawing.Point(493, 26);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(52, 27);
+            this.label49.Size = new System.Drawing.Size(42, 22);
             this.label49.TabIndex = 13;
             this.label49.Text = "mm";
             // 
@@ -914,9 +893,9 @@
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label50.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label50.Location = new System.Drawing.Point(28, 37);
+            this.label50.Location = new System.Drawing.Point(353, 26);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(112, 27);
+            this.label50.Size = new System.Drawing.Size(90, 22);
             this.label50.TabIndex = 12;
             this.label50.Text = "油缸位移：";
             // 
@@ -925,9 +904,9 @@
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label43.ForeColor = System.Drawing.Color.Blue;
-            this.label43.Location = new System.Drawing.Point(597, 100);
+            this.label43.Location = new System.Drawing.Point(612, 101);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(58, 27);
+            this.label43.Size = new System.Drawing.Size(46, 22);
             this.label43.TabIndex = 11;
             this.label43.Text = "Mpa";
             // 
@@ -936,9 +915,9 @@
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label44.ForeColor = System.Drawing.Color.Blue;
-            this.label44.Location = new System.Drawing.Point(542, 69);
+            this.label44.Location = new System.Drawing.Point(557, 69);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(112, 27);
+            this.label44.Size = new System.Drawing.Size(90, 22);
             this.label44.TabIndex = 10;
             this.label44.Text = "下游压力：";
             // 
@@ -947,9 +926,9 @@
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label45.ForeColor = System.Drawing.Color.Lime;
-            this.label45.Location = new System.Drawing.Point(478, 100);
+            this.label45.Location = new System.Drawing.Point(490, 101);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(58, 27);
+            this.label45.Size = new System.Drawing.Size(46, 22);
             this.label45.TabIndex = 9;
             this.label45.Text = "Mpa";
             // 
@@ -958,9 +937,9 @@
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label46.ForeColor = System.Drawing.Color.Lime;
-            this.label46.Location = new System.Drawing.Point(418, 69);
+            this.label46.Location = new System.Drawing.Point(433, 69);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(112, 27);
+            this.label46.Size = new System.Drawing.Size(90, 22);
             this.label46.TabIndex = 8;
             this.label46.Text = "环腔压力：";
             // 
@@ -969,9 +948,9 @@
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label39.ForeColor = System.Drawing.Color.Fuchsia;
-            this.label39.Location = new System.Drawing.Point(349, 107);
+            this.label39.Location = new System.Drawing.Point(364, 104);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(58, 27);
+            this.label39.Size = new System.Drawing.Size(46, 22);
             this.label39.TabIndex = 7;
             this.label39.Text = "Mpa";
             // 
@@ -980,9 +959,9 @@
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label40.ForeColor = System.Drawing.Color.Fuchsia;
-            this.label40.Location = new System.Drawing.Point(289, 72);
+            this.label40.Location = new System.Drawing.Point(304, 72);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(112, 27);
+            this.label40.Size = new System.Drawing.Size(90, 22);
             this.label40.TabIndex = 6;
             this.label40.Text = "上游压力：";
             // 
@@ -990,9 +969,9 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label41.Location = new System.Drawing.Point(895, 65);
+            this.label41.Location = new System.Drawing.Point(176, 100);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(58, 27);
+            this.label41.Size = new System.Drawing.Size(46, 22);
             this.label41.TabIndex = 5;
             this.label41.Text = "Mpa";
             // 
@@ -1000,19 +979,19 @@
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label42.Location = new System.Drawing.Point(765, 65);
+            this.label42.Location = new System.Drawing.Point(7, 100);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(84, 27);
+            this.label42.Size = new System.Drawing.Size(122, 22);
             this.label42.TabIndex = 4;
-            this.label42.Text = "压力3：";
+            this.label42.Text = "油缸出口压力：";
             // 
             // label37
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label37.Location = new System.Drawing.Point(169, 108);
+            this.label37.Location = new System.Drawing.Point(176, 65);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(58, 27);
+            this.label37.Size = new System.Drawing.Size(46, 22);
             this.label37.TabIndex = 3;
             this.label37.Text = "Mpa";
             // 
@@ -1020,19 +999,19 @@
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label38.Location = new System.Drawing.Point(27, 108);
+            this.label38.Location = new System.Drawing.Point(7, 66);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(112, 27);
+            this.label38.Size = new System.Drawing.Size(122, 22);
             this.label38.TabIndex = 2;
-            this.label38.Text = "右缸压力：";
+            this.label38.Text = "油缸入口压力：";
             // 
             // label36
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label36.Location = new System.Drawing.Point(168, 72);
+            this.label36.Location = new System.Drawing.Point(176, 29);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(58, 27);
+            this.label36.Size = new System.Drawing.Size(46, 22);
             this.label36.TabIndex = 1;
             this.label36.Text = "Mpa";
             // 
@@ -1040,83 +1019,83 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label26.Location = new System.Drawing.Point(27, 72);
+            this.label26.Location = new System.Drawing.Point(7, 29);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(112, 27);
+            this.label26.Size = new System.Drawing.Size(122, 22);
             this.label26.TabIndex = 0;
-            this.label26.Text = "左缸压力：";
+            this.label26.Text = "液压系统压力：";
             // 
             // chart1
             // 
-            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea1.AxisX.IsLabelAutoFit = false;
-            chartArea1.AxisX.LabelAutoFitMaxFontSize = 12;
-            chartArea1.AxisX.LabelAutoFitMinFontSize = 10;
-            chartArea1.AxisX.LabelStyle.Format = "HH:mm:ss";
-            chartArea1.AxisX.LabelStyle.Interval = 0D;
-            chartArea1.AxisX.LabelStyle.IntervalOffset = 0D;
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea1.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea1.AxisX.MaximumAutoSize = 95F;
-            chartArea1.AxisY.LabelAutoFitMaxFontSize = 12;
-            chartArea1.AxisY.LabelAutoFitMinFontSize = 10;
-            chartArea1.AxisY.LabelStyle.Angle = 30;
-            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.LabelStyle.Interval = 5D;
-            chartArea1.AxisY.LabelStyle.IntervalOffset = 0D;
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            chartArea1.AxisY.Maximum = 25D;
-            chartArea1.AxisY.MaximumAutoSize = 10F;
-            chartArea1.AxisY.Minimum = 0D;
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.ToolTip = "压力(MPa)";
-            chartArea1.CursorY.AutoScroll = false;
-            chartArea1.CursorY.Interval = 10D;
-            chartArea1.Name = "ChartArea1";
-            chartArea1.Position.Auto = false;
-            chartArea1.Position.Height = 94F;
-            chartArea1.Position.Width = 92F;
-            chartArea1.Position.Y = 2F;
-            this.chart1.ChartAreas.Add(chartArea1);
+            chartArea3.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea3.AxisX.IsLabelAutoFit = false;
+            chartArea3.AxisX.LabelAutoFitMaxFontSize = 12;
+            chartArea3.AxisX.LabelAutoFitMinFontSize = 10;
+            chartArea3.AxisX.LabelStyle.Format = "HH:mm:ss";
+            chartArea3.AxisX.LabelStyle.Interval = 0D;
+            chartArea3.AxisX.LabelStyle.IntervalOffset = 0D;
+            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea3.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea3.AxisX.MaximumAutoSize = 95F;
+            chartArea3.AxisY.LabelAutoFitMaxFontSize = 12;
+            chartArea3.AxisY.LabelAutoFitMinFontSize = 10;
+            chartArea3.AxisY.LabelStyle.Angle = 30;
+            chartArea3.AxisY.LabelStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.AxisY.LabelStyle.Interval = 5D;
+            chartArea3.AxisY.LabelStyle.IntervalOffset = 0D;
+            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea3.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            chartArea3.AxisY.Maximum = 25D;
+            chartArea3.AxisY.MaximumAutoSize = 10F;
+            chartArea3.AxisY.Minimum = 0D;
+            chartArea3.AxisY.TitleFont = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea3.AxisY.ToolTip = "压力(MPa)";
+            chartArea3.CursorY.AutoScroll = false;
+            chartArea3.CursorY.Interval = 10D;
+            chartArea3.Name = "ChartArea1";
+            chartArea3.Position.Auto = false;
+            chartArea3.Position.Height = 94F;
+            chartArea3.Position.Width = 92F;
+            chartArea3.Position.Y = 2F;
+            this.chart1.ChartAreas.Add(chartArea3);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.AutoFitMinFontSize = 8;
-            legend1.IsDockedInsideChartArea = false;
-            legend1.ItemColumnSpacing = 10;
-            legend1.MaximumAutoSize = 10F;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            legend3.AutoFitMinFontSize = 8;
+            legend3.IsDockedInsideChartArea = false;
+            legend3.ItemColumnSpacing = 10;
+            legend3.MaximumAutoSize = 10F;
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Margin = new System.Windows.Forms.Padding(0);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series1.BorderWidth = 2;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series1.Color = System.Drawing.Color.Magenta;
-            series1.Legend = "Legend1";
-            series1.LegendText = "上游压力";
-            series1.Name = "Series1";
-            series1.ToolTip = "压力1";
-            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            series2.BorderWidth = 2;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series2.Color = System.Drawing.Color.Lime;
-            series2.Legend = "Legend1";
-            series2.LegendText = "环腔压力";
-            series2.Name = "Series2";
-            series3.BorderWidth = 2;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series3.Color = System.Drawing.Color.Blue;
-            series3.Legend = "Legend1";
-            series3.LegendText = "下游压力";
-            series3.Name = "Series3";
-            this.chart1.Series.Add(series1);
-            this.chart1.Series.Add(series2);
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(976, 189);
+            series7.BorderWidth = 2;
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series7.Color = System.Drawing.Color.Magenta;
+            series7.Legend = "Legend1";
+            series7.LegendText = "上游压力";
+            series7.Name = "Series1";
+            series7.ToolTip = "压力1";
+            series7.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series8.BorderWidth = 2;
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series8.Color = System.Drawing.Color.Lime;
+            series8.Legend = "Legend1";
+            series8.LegendText = "环腔压力";
+            series8.Name = "Series2";
+            series9.BorderWidth = 2;
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series9.Color = System.Drawing.Color.Blue;
+            series9.Legend = "Legend1";
+            series9.LegendText = "下游压力";
+            series9.Name = "Series3";
+            this.chart1.Series.Add(series7);
+            this.chart1.Series.Add(series8);
+            this.chart1.Series.Add(series9);
+            this.chart1.Size = new System.Drawing.Size(976, 278);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
             // 
@@ -1127,7 +1106,7 @@
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
             this.toolStripProgressBar1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 601);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 604);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(976, 25);
             this.statusStrip1.TabIndex = 8;
@@ -1138,7 +1117,7 @@
             this.toolStripStatusLabel1.AutoSize = false;
             this.toolStripStatusLabel1.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(150, 19);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(150, 20);
             this.toolStripStatusLabel1.Text = "信号强度：-76dB";
             // 
             // toolStripStatusLabel2
@@ -1147,7 +1126,7 @@
             this.toolStripStatusLabel2.BackColor = System.Drawing.Color.Chartreuse;
             this.toolStripStatusLabel2.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(60, 19);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(60, 20);
             this.toolStripStatusLabel2.Text = "锚定正常";
             // 
             // toolStripProgressBar1
@@ -1155,333 +1134,107 @@
             this.toolStripProgressBar1.AutoSize = false;
             this.toolStripProgressBar1.Maximum = 40;
             this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 17);
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 19);
             this.toolStripProgressBar1.Value = 20;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.label29);
-            this.groupBox1.Controls.Add(this.label31);
-            this.groupBox1.Controls.Add(this.label32);
-            this.groupBox1.Controls.Add(this.label33);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.label23);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.combo_CheckType);
+            this.groupBox1.Controls.Add(this.btn_PlugCheck);
+            this.groupBox1.Controls.Add(this.Lb_SI4);
+            this.groupBox1.Controls.Add(this.Lb_SI3);
+            this.groupBox1.Controls.Add(this.Lb_SI2);
+            this.groupBox1.Controls.Add(this.Lb_SI1);
+            this.groupBox1.Controls.Add(this.Lb_SI5);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 77);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(976, 177);
+            this.groupBox1.Size = new System.Drawing.Size(976, 94);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "状态指示区";
             // 
-            // label19
+            // combo_CheckType
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Silver;
-            this.label19.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label19.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label19.Location = new System.Drawing.Point(252, 107);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(95, 25);
-            this.label19.TabIndex = 43;
-            this.label19.Text = "保持5分钟";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Lime;
-            this.label16.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label16.Location = new System.Drawing.Point(254, 81);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(95, 25);
-            this.label16.TabIndex = 42;
-            this.label16.Text = "保持5分钟";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Lime;
-            this.label13.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label13.Location = new System.Drawing.Point(165, 107);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 25);
-            this.label13.TabIndex = 41;
-            this.label13.Text = "P3=P2<P1";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Lime;
-            this.label9.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label9.Location = new System.Drawing.Point(332, 81);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(138, 25);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "低压侧验封完成";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(3, 107);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 25);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "高压侧验封";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Silver;
-            this.label11.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label11.Location = new System.Drawing.Point(332, 107);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(138, 25);
-            this.label11.TabIndex = 38;
-            this.label11.Text = "低压侧验封完成";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Lime;
-            this.label12.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Location = new System.Drawing.Point(85, 107);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(102, 25);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "高压侧注压";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(3, 81);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 25);
-            this.label4.TabIndex = 36;
-            this.label4.Text = "低压侧验封";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Silver;
-            this.label3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(174, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 25);
-            this.label3.TabIndex = 35;
-            this.label3.Text = "直接验封完成";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.combo_CheckType.FormattingEnabled = true;
+            this.combo_CheckType.Items.AddRange(new object[] {
             "直接验封",
             "低压测验证",
             "高压侧验证",
             "环腔试压验证"});
-            this.comboBox1.Location = new System.Drawing.Point(676, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 31);
-            this.comboBox1.TabIndex = 34;
+            this.combo_CheckType.Location = new System.Drawing.Point(701, 34);
+            this.combo_CheckType.Name = "combo_CheckType";
+            this.combo_CheckType.Size = new System.Drawing.Size(113, 28);
+            this.combo_CheckType.TabIndex = 34;
             // 
-            // button3
+            // btn_PlugCheck
             // 
-            this.button3.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(812, 25);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(113, 44);
-            this.button3.TabIndex = 33;
-            this.button3.Text = "验封判断";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btn_PlugCheck.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_PlugCheck.Location = new System.Drawing.Point(837, 25);
+            this.btn_PlugCheck.Name = "btn_PlugCheck";
+            this.btn_PlugCheck.Size = new System.Drawing.Size(113, 44);
+            this.btn_PlugCheck.TabIndex = 33;
+            this.btn_PlugCheck.Text = "验封判断";
+            this.btn_PlugCheck.UseVisualStyleBackColor = true;
+            this.btn_PlugCheck.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label17
+            // Lb_SI4
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Silver;
-            this.label17.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label17.Location = new System.Drawing.Point(318, 138);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(84, 25);
-            this.label17.TabIndex = 31;
-            this.label17.Text = "解封完成";
+            this.Lb_SI4.AutoSize = true;
+            this.Lb_SI4.BackColor = System.Drawing.Color.White;
+            this.Lb_SI4.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Lb_SI4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lb_SI4.Location = new System.Drawing.Point(277, 34);
+            this.Lb_SI4.Name = "Lb_SI4";
+            this.Lb_SI4.Size = new System.Drawing.Size(72, 26);
+            this.Lb_SI4.TabIndex = 11;
+            this.Lb_SI4.Text = "          ";
             // 
-            // label29
+            // Lb_SI3
             // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.Silver;
-            this.label29.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label29.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label29.Location = new System.Drawing.Point(223, 138);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(120, 25);
-            this.label29.TabIndex = 27;
-            this.label29.Text = "系统压力达标";
+            this.Lb_SI3.AutoSize = true;
+            this.Lb_SI3.BackColor = System.Drawing.Color.White;
+            this.Lb_SI3.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Lb_SI3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lb_SI3.Location = new System.Drawing.Point(204, 34);
+            this.Lb_SI3.Name = "Lb_SI3";
+            this.Lb_SI3.Size = new System.Drawing.Size(72, 26);
+            this.Lb_SI3.TabIndex = 7;
+            this.Lb_SI3.Text = "          ";
             // 
-            // label31
+            // Lb_SI2
             // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.Silver;
-            this.label31.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label31.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label31.Location = new System.Drawing.Point(156, 138);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(84, 25);
-            this.label31.TabIndex = 25;
-            this.label31.Text = "收到指令";
+            this.Lb_SI2.AutoSize = true;
+            this.Lb_SI2.BackColor = System.Drawing.Color.White;
+            this.Lb_SI2.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Lb_SI2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lb_SI2.Location = new System.Drawing.Point(115, 34);
+            this.Lb_SI2.Name = "Lb_SI2";
+            this.Lb_SI2.Size = new System.Drawing.Size(90, 26);
+            this.Lb_SI2.TabIndex = 5;
+            this.Lb_SI2.Text = "             ";
             // 
-            // label32
+            // Lb_SI1
             // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.Silver;
-            this.label32.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label32.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label32.Location = new System.Drawing.Point(88, 138);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(84, 25);
-            this.label32.TabIndex = 24;
-            this.label32.Text = "下发指令";
+            this.Lb_SI1.AutoSize = true;
+            this.Lb_SI1.BackColor = System.Drawing.Color.White;
+            this.Lb_SI1.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Lb_SI1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Lb_SI1.Location = new System.Drawing.Point(26, 34);
+            this.Lb_SI1.Name = "Lb_SI1";
+            this.Lb_SI1.Size = new System.Drawing.Size(84, 26);
+            this.Lb_SI1.TabIndex = 4;
+            this.Lb_SI1.Text = "            ";
             // 
-            // label33
+            // Lb_SI5
             // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label33.Location = new System.Drawing.Point(17, 138);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(84, 25);
-            this.label33.TabIndex = 23;
-            this.label33.Text = "解封控制";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Lime;
-            this.label15.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label15.Location = new System.Drawing.Point(165, 81);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(109, 25);
-            this.label15.TabIndex = 20;
-            this.label15.Text = "P3=P1>P2";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Lime;
-            this.label18.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label18.Location = new System.Drawing.Point(85, 81);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(102, 25);
-            this.label18.TabIndex = 17;
-            this.label18.Text = "低压侧泄压";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.OrangeRed;
-            this.label20.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label20.Location = new System.Drawing.Point(88, 55);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(109, 25);
-            this.label20.TabIndex = 15;
-            this.label20.Text = "P3>P1=P2";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label23.Location = new System.Drawing.Point(17, 55);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(84, 25);
-            this.label23.TabIndex = 12;
-            this.label23.Text = "直接验封";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Lime;
-            this.label14.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label14.Location = new System.Drawing.Point(318, 25);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(120, 25);
-            this.label14.TabIndex = 11;
-            this.label14.Text = "坐封初步完成";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Lime;
-            this.label10.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label10.Location = new System.Drawing.Point(223, 25);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(120, 25);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "系统压力达标";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Lime;
-            this.label8.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(156, 25);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 25);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "收到指令";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Lime;
-            this.label7.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label7.Location = new System.Drawing.Point(88, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 25);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "下发指令";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(17, 25);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 25);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "坐封控制";
+            this.Lb_SI5.AutoSize = true;
+            this.Lb_SI5.Font = new System.Drawing.Font("微软雅黑", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Lb_SI5.Location = new System.Drawing.Point(353, 34);
+            this.Lb_SI5.Name = "Lb_SI5";
+            this.Lb_SI5.Size = new System.Drawing.Size(72, 26);
+            this.Lb_SI5.TabIndex = 3;
+            this.Lb_SI5.Text = "          ";
             // 
             // grpBoxCtrl
             // 
@@ -1493,7 +1246,6 @@
             this.grpBoxCtrl.Controls.Add(this.btn_CMD2);
             this.grpBoxCtrl.Controls.Add(this.btn_CMD1);
             this.grpBoxCtrl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grpBoxCtrl.Enabled = false;
             this.grpBoxCtrl.Location = new System.Drawing.Point(0, 0);
             this.grpBoxCtrl.Name = "grpBoxCtrl";
             this.grpBoxCtrl.Size = new System.Drawing.Size(976, 77);
@@ -1580,9 +1332,9 @@
             // tabPage4
             // 
             this.tabPage4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tabPage4.Location = new System.Drawing.Point(4, 32);
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(976, 626);
+            this.tabPage4.Size = new System.Drawing.Size(976, 629);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = " 测 后 处 理 ";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1591,6 +1343,70 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // textBox_VBAT
+            // 
+            this.textBox_VBAT.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_VBAT.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.textBox_VBAT.Location = new System.Drawing.Point(837, 66);
+            this.textBox_VBAT.Name = "textBox_VBAT";
+            this.textBox_VBAT.ReadOnly = true;
+            this.textBox_VBAT.Size = new System.Drawing.Size(50, 29);
+            this.textBox_VBAT.TabIndex = 26;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(890, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(21, 22);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "V";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Location = new System.Drawing.Point(763, 69);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 22);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "电池：";
+            // 
+            // textBox_Temp
+            // 
+            this.textBox_Temp.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_Temp.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.textBox_Temp.Location = new System.Drawing.Point(837, 31);
+            this.textBox_Temp.Name = "textBox_Temp";
+            this.textBox_Temp.ReadOnly = true;
+            this.textBox_Temp.Size = new System.Drawing.Size(50, 29);
+            this.textBox_Temp.TabIndex = 29;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label5.Location = new System.Drawing.Point(890, 34);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(26, 22);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "℃";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(763, 34);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 22);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "温度：";
             // 
             // FrmMain
             // 
@@ -1601,6 +1417,7 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "智能封堵器";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -1645,27 +1462,16 @@
         private System.Windows.Forms.Button btn_CMD1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox_lastProj;
+        private System.Windows.Forms.TextBox textBox_OpenProj;
+        private System.Windows.Forms.Button btn_OpenProj;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label Lb_SI4;
+        private System.Windows.Forms.Label Lb_SI3;
+        private System.Windows.Forms.Label Lb_SI2;
+        private System.Windows.Forms.Label Lb_SI1;
+        private System.Windows.Forms.Label Lb_SI5;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Timer timer1;
@@ -1715,7 +1521,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dGv_test_para;
         private System.Windows.Forms.Button btn_testAutoUpdate;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btn_testFileClear;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -1734,19 +1539,18 @@
         private System.Windows.Forms.Button btn_CMD4;
         private System.Windows.Forms.Button btn_CMD3;
         private System.Windows.Forms.Button btn_CMD0;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox combo_CheckType;
+        private System.Windows.Forms.Button btn_PlugCheck;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox textBox_Temp;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox_VBAT;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
