@@ -29,26 +29,39 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.combo_PortSel2 = new System.Windows.Forms.ComboBox();
+            this.combo_PortSel1 = new System.Windows.Forms.ComboBox();
+            this.btn_PortOpen2 = new System.Windows.Forms.Button();
+            this.label51 = new System.Windows.Forms.Label();
+            this.btn_PortOpen1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.combo_PortSel3 = new System.Windows.Forms.ComboBox();
+            this.btn_PortOpen3 = new System.Windows.Forms.Button();
+            this.label52 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -58,18 +71,9 @@
             this.textBox_OpenProj = new System.Windows.Forms.TextBox();
             this.btn_OpenProj = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.combo_PortSel3 = new System.Windows.Forms.ComboBox();
-            this.btn_PortOpen3 = new System.Windows.Forms.Button();
-            this.label52 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.combo_PortSel2 = new System.Windows.Forms.ComboBox();
-            this.combo_PortSel1 = new System.Windows.Forms.ComboBox();
-            this.btn_PortOpen2 = new System.Windows.Forms.Button();
-            this.label51 = new System.Windows.Forms.Label();
-            this.btn_PortOpen1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dGv_test_Config = new System.Windows.Forms.DataGridView();
+            this.btn_testCfgWrite = new System.Windows.Forms.Button();
+            this.btn_testCfgRead = new System.Windows.Forms.Button();
             this.btn_testFileClear = new System.Windows.Forms.Button();
             this.btn_testAutoUpdate = new System.Windows.Forms.Button();
             this.dGv_test_para = new System.Windows.Forms.DataGridView();
@@ -94,6 +98,12 @@
             this.label54 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.textBox_Temp = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox_VBAT = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBox_P7 = new System.Windows.Forms.TextBox();
             this.textBox_P3 = new System.Windows.Forms.TextBox();
             this.textBox_P2 = new System.Windows.Forms.TextBox();
@@ -142,19 +152,13 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.textBox_VBAT = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox_Temp = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGv_test_Config)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGv_test_para)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -182,6 +186,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.groupBox5);
+            this.tabPage1.Controls.Add(this.groupBox6);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.button2);
@@ -194,144 +201,15 @@
             this.tabPage1.Text = " 软 件 设 置 ";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // button1
             // 
-            this.button3.Location = new System.Drawing.Point(719, 427);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(164, 32);
-            this.button3.TabIndex = 59;
-            this.button3.Text = "模拟坐封完成";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(719, 376);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(164, 32);
-            this.button4.TabIndex = 58;
-            this.button4.Text = "模拟右固定信标接收";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(719, 328);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(164, 32);
-            this.button2.TabIndex = 57;
-            this.button2.Text = "模拟左固定信标接收";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.textBox_lastProj);
-            this.groupBox2.Controls.Add(this.textBox_OpenProj);
-            this.groupBox2.Controls.Add(this.btn_OpenProj);
-            this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.groupBox2.Location = new System.Drawing.Point(3, 19);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(970, 121);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "存档设置";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(16, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 22);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "已打开上次工程:";
-            // 
-            // textBox_lastProj
-            // 
-            this.textBox_lastProj.Location = new System.Drawing.Point(149, 25);
-            this.textBox_lastProj.Name = "textBox_lastProj";
-            this.textBox_lastProj.ReadOnly = true;
-            this.textBox_lastProj.Size = new System.Drawing.Size(681, 29);
-            this.textBox_lastProj.TabIndex = 4;
-            this.textBox_lastProj.Text = "H:\\MyProject\\SmartPlug";
-            // 
-            // textBox_OpenProj
-            // 
-            this.textBox_OpenProj.Location = new System.Drawing.Point(149, 72);
-            this.textBox_OpenProj.Name = "textBox_OpenProj";
-            this.textBox_OpenProj.ReadOnly = true;
-            this.textBox_OpenProj.Size = new System.Drawing.Size(681, 29);
-            this.textBox_OpenProj.TabIndex = 3;
-            this.textBox_OpenProj.Text = "选择并打开一个文件夹，如果有工程文件则追加写入，否则新建工程记录文件";
-            // 
-            // btn_OpenProj
-            // 
-            this.btn_OpenProj.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_OpenProj.Location = new System.Drawing.Point(20, 71);
-            this.btn_OpenProj.Name = "btn_OpenProj";
-            this.btn_OpenProj.Size = new System.Drawing.Size(123, 31);
-            this.btn_OpenProj.TabIndex = 2;
-            this.btn_OpenProj.Text = "打开/新建工程";
-            this.btn_OpenProj.UseVisualStyleBackColor = true;
-            this.btn_OpenProj.Click += new System.EventHandler(this.btn_OpenProj_Click);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.groupBox6);
-            this.tabPage2.Controls.Add(this.groupBox5);
-            this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(976, 629);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = " 仪 器 操作";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.combo_PortSel3);
-            this.groupBox6.Controls.Add(this.btn_PortOpen3);
-            this.groupBox6.Controls.Add(this.label52);
-            this.groupBox6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox6.Location = new System.Drawing.Point(6, 499);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(960, 100);
-            this.groupBox6.TabIndex = 65;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "管外通信单元";
-            // 
-            // combo_PortSel3
-            // 
-            this.combo_PortSel3.FormattingEnabled = true;
-            this.combo_PortSel3.Location = new System.Drawing.Point(158, 47);
-            this.combo_PortSel3.Margin = new System.Windows.Forms.Padding(4);
-            this.combo_PortSel3.Name = "combo_PortSel3";
-            this.combo_PortSel3.Size = new System.Drawing.Size(72, 30);
-            this.combo_PortSel3.TabIndex = 55;
-            // 
-            // btn_PortOpen3
-            // 
-            this.btn_PortOpen3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_PortOpen3.Location = new System.Drawing.Point(264, 45);
-            this.btn_PortOpen3.Name = "btn_PortOpen3";
-            this.btn_PortOpen3.Size = new System.Drawing.Size(79, 28);
-            this.btn_PortOpen3.TabIndex = 54;
-            this.btn_PortOpen3.Text = "打开";
-            this.btn_PortOpen3.UseVisualStyleBackColor = true;
-            this.btn_PortOpen3.Click += new System.EventHandler(this.btn_PortOpen3_Click);
-            // 
-            // label52
-            // 
-            this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label52.Location = new System.Drawing.Point(0, 47);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(154, 21);
-            this.label52.TabIndex = 53;
-            this.label52.Text = "管外通信单元串口：";
+            this.button1.Location = new System.Drawing.Point(614, 184);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 32);
+            this.button1.TabIndex = 68;
+            this.button1.Text = "信标开启";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox5
             // 
@@ -342,10 +220,10 @@
             this.groupBox5.Controls.Add(this.btn_PortOpen1);
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox5.Location = new System.Drawing.Point(6, 331);
+            this.groupBox5.Location = new System.Drawing.Point(8, 279);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(960, 162);
-            this.groupBox5.TabIndex = 64;
+            this.groupBox5.TabIndex = 67;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "信标监视";
             // 
@@ -409,35 +287,205 @@
             this.label2.TabIndex = 52;
             this.label2.Text = "上游信标盒串口：";
             // 
-            // groupBox4
+            // groupBox6
             // 
-            this.groupBox4.Controls.Add(this.btn_testFileClear);
-            this.groupBox4.Controls.Add(this.btn_testAutoUpdate);
-            this.groupBox4.Controls.Add(this.dGv_test_para);
-            this.groupBox4.Controls.Add(this.btn_testTimeRead);
-            this.groupBox4.Controls.Add(this.label53);
-            this.groupBox4.Controls.Add(this.btn_testTimeSync);
-            this.groupBox4.Controls.Add(this.btn_PortOpen4);
-            this.groupBox4.Controls.Add(this.btn_testCMDSend);
-            this.groupBox4.Controls.Add(this.combo_PortSel4);
-            this.groupBox4.Controls.Add(this.combo_testCMD);
-            this.groupBox4.Controls.Add(this.label54);
-            this.groupBox4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox4.Location = new System.Drawing.Point(8, 28);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(960, 297);
-            this.groupBox4.TabIndex = 63;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "仪器测试";
+            this.groupBox6.Controls.Add(this.combo_PortSel3);
+            this.groupBox6.Controls.Add(this.btn_PortOpen3);
+            this.groupBox6.Controls.Add(this.label52);
+            this.groupBox6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox6.Location = new System.Drawing.Point(8, 475);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(960, 100);
+            this.groupBox6.TabIndex = 66;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "管外通信单元";
+            // 
+            // combo_PortSel3
+            // 
+            this.combo_PortSel3.FormattingEnabled = true;
+            this.combo_PortSel3.Location = new System.Drawing.Point(158, 47);
+            this.combo_PortSel3.Margin = new System.Windows.Forms.Padding(4);
+            this.combo_PortSel3.Name = "combo_PortSel3";
+            this.combo_PortSel3.Size = new System.Drawing.Size(72, 30);
+            this.combo_PortSel3.TabIndex = 55;
+            // 
+            // btn_PortOpen3
+            // 
+            this.btn_PortOpen3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_PortOpen3.Location = new System.Drawing.Point(264, 45);
+            this.btn_PortOpen3.Name = "btn_PortOpen3";
+            this.btn_PortOpen3.Size = new System.Drawing.Size(79, 28);
+            this.btn_PortOpen3.TabIndex = 54;
+            this.btn_PortOpen3.Text = "打开";
+            this.btn_PortOpen3.UseVisualStyleBackColor = true;
+            this.btn_PortOpen3.Click += new System.EventHandler(this.btn_PortOpen3_Click);
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label52.Location = new System.Drawing.Point(0, 47);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(154, 21);
+            this.label52.TabIndex = 53;
+            this.label52.Text = "管外通信单元串口：";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(790, 184);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(164, 32);
+            this.button3.TabIndex = 59;
+            this.button3.Text = "模拟坐封完成";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(790, 222);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(164, 32);
+            this.button4.TabIndex = 58;
+            this.button4.Text = "模拟右固定信标接收";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(790, 146);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(164, 32);
+            this.button2.TabIndex = 57;
+            this.button2.Text = "模拟左固定信标接收";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.textBox_lastProj);
+            this.groupBox2.Controls.Add(this.textBox_OpenProj);
+            this.groupBox2.Controls.Add(this.btn_OpenProj);
+            this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.groupBox2.Location = new System.Drawing.Point(3, 19);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(970, 121);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "存档设置";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(16, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(127, 22);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "已打开上次工程:";
+            // 
+            // textBox_lastProj
+            // 
+            this.textBox_lastProj.Location = new System.Drawing.Point(149, 25);
+            this.textBox_lastProj.Name = "textBox_lastProj";
+            this.textBox_lastProj.ReadOnly = true;
+            this.textBox_lastProj.Size = new System.Drawing.Size(681, 29);
+            this.textBox_lastProj.TabIndex = 4;
+            this.textBox_lastProj.Text = "H:\\MyProject\\SmartPlug";
+            // 
+            // textBox_OpenProj
+            // 
+            this.textBox_OpenProj.Location = new System.Drawing.Point(149, 72);
+            this.textBox_OpenProj.Name = "textBox_OpenProj";
+            this.textBox_OpenProj.ReadOnly = true;
+            this.textBox_OpenProj.Size = new System.Drawing.Size(681, 29);
+            this.textBox_OpenProj.TabIndex = 3;
+            this.textBox_OpenProj.Text = "选择并打开一个文件夹，如果有工程文件则追加写入，否则新建工程记录文件";
+            // 
+            // btn_OpenProj
+            // 
+            this.btn_OpenProj.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_OpenProj.Location = new System.Drawing.Point(20, 71);
+            this.btn_OpenProj.Name = "btn_OpenProj";
+            this.btn_OpenProj.Size = new System.Drawing.Size(123, 31);
+            this.btn_OpenProj.TabIndex = 2;
+            this.btn_OpenProj.Text = "打开/新建工程";
+            this.btn_OpenProj.UseVisualStyleBackColor = true;
+            this.btn_OpenProj.Click += new System.EventHandler(this.btn_OpenProj_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.dGv_test_Config);
+            this.tabPage2.Controls.Add(this.btn_testCfgWrite);
+            this.tabPage2.Controls.Add(this.btn_testCfgRead);
+            this.tabPage2.Controls.Add(this.btn_testFileClear);
+            this.tabPage2.Controls.Add(this.btn_testAutoUpdate);
+            this.tabPage2.Controls.Add(this.dGv_test_para);
+            this.tabPage2.Controls.Add(this.btn_testTimeRead);
+            this.tabPage2.Controls.Add(this.label53);
+            this.tabPage2.Controls.Add(this.btn_testTimeSync);
+            this.tabPage2.Controls.Add(this.btn_PortOpen4);
+            this.tabPage2.Controls.Add(this.btn_testCMDSend);
+            this.tabPage2.Controls.Add(this.combo_PortSel4);
+            this.tabPage2.Controls.Add(this.combo_testCMD);
+            this.tabPage2.Controls.Add(this.label54);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(976, 629);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = " 仪 器 操作";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // dGv_test_Config
+            // 
+            this.dGv_test_Config.AllowUserToAddRows = false;
+            this.dGv_test_Config.AllowUserToDeleteRows = false;
+            this.dGv_test_Config.AllowUserToResizeColumns = false;
+            this.dGv_test_Config.AllowUserToResizeRows = false;
+            this.dGv_test_Config.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dGv_test_Config.ColumnHeadersVisible = false;
+            this.dGv_test_Config.Location = new System.Drawing.Point(26, 236);
+            this.dGv_test_Config.Name = "dGv_test_Config";
+            this.dGv_test_Config.RowHeadersWidth = 20;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dGv_test_Config.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dGv_test_Config.RowTemplate.Height = 23;
+            this.dGv_test_Config.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dGv_test_Config.ShowCellToolTips = false;
+            this.dGv_test_Config.Size = new System.Drawing.Size(643, 371);
+            this.dGv_test_Config.TabIndex = 80;
+            // 
+            // btn_testCfgWrite
+            // 
+            this.btn_testCfgWrite.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_testCfgWrite.Location = new System.Drawing.Point(739, 422);
+            this.btn_testCfgWrite.Name = "btn_testCfgWrite";
+            this.btn_testCfgWrite.Size = new System.Drawing.Size(121, 45);
+            this.btn_testCfgWrite.TabIndex = 79;
+            this.btn_testCfgWrite.Text = "写入配置参数";
+            this.btn_testCfgWrite.UseVisualStyleBackColor = true;
+            this.btn_testCfgWrite.Click += new System.EventHandler(this.Btn_testCfgWrite_Click);
+            // 
+            // btn_testCfgRead
+            // 
+            this.btn_testCfgRead.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn_testCfgRead.Location = new System.Drawing.Point(739, 298);
+            this.btn_testCfgRead.Name = "btn_testCfgRead";
+            this.btn_testCfgRead.Size = new System.Drawing.Size(121, 45);
+            this.btn_testCfgRead.TabIndex = 78;
+            this.btn_testCfgRead.Text = "读取配置参数";
+            this.btn_testCfgRead.UseVisualStyleBackColor = true;
+            this.btn_testCfgRead.Click += new System.EventHandler(this.Btn_testCfgRead_Click);
             // 
             // btn_testFileClear
             // 
             this.btn_testFileClear.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn_testFileClear.ForeColor = System.Drawing.Color.Red;
-            this.btn_testFileClear.Location = new System.Drawing.Point(796, 49);
+            this.btn_testFileClear.Location = new System.Drawing.Point(791, 39);
             this.btn_testFileClear.Name = "btn_testFileClear";
             this.btn_testFileClear.Size = new System.Drawing.Size(123, 38);
-            this.btn_testFileClear.TabIndex = 66;
+            this.btn_testFileClear.TabIndex = 77;
             this.btn_testFileClear.Text = "存盘文件清空";
             this.btn_testFileClear.UseVisualStyleBackColor = true;
             this.btn_testFileClear.Visible = false;
@@ -445,10 +493,10 @@
             // btn_testAutoUpdate
             // 
             this.btn_testAutoUpdate.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_testAutoUpdate.Location = new System.Drawing.Point(31, 155);
+            this.btn_testAutoUpdate.Location = new System.Drawing.Point(26, 117);
             this.btn_testAutoUpdate.Name = "btn_testAutoUpdate";
             this.btn_testAutoUpdate.Size = new System.Drawing.Size(138, 32);
-            this.btn_testAutoUpdate.TabIndex = 65;
+            this.btn_testAutoUpdate.TabIndex = 76;
             this.btn_testAutoUpdate.Text = "自动读参数-开";
             this.btn_testAutoUpdate.UseVisualStyleBackColor = true;
             this.btn_testAutoUpdate.Click += new System.EventHandler(this.Btn_testAutoUpdate_Click);
@@ -472,24 +520,24 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11});
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle38.Format = "N4";
-            dataGridViewCellStyle38.NullValue = null;
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dGv_test_para.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.Format = "N4";
+            dataGridViewCellStyle13.NullValue = null;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dGv_test_para.DefaultCellStyle = dataGridViewCellStyle13;
             this.dGv_test_para.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
-            this.dGv_test_para.Location = new System.Drawing.Point(31, 205);
+            this.dGv_test_para.Location = new System.Drawing.Point(26, 155);
             this.dGv_test_para.Name = "dGv_test_para";
             this.dGv_test_para.RowHeadersVisible = false;
             this.dGv_test_para.RowHeadersWidth = 20;
             this.dGv_test_para.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dGv_test_para.RowsDefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dGv_test_para.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.dGv_test_para.RowTemplate.Height = 23;
             this.dGv_test_para.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dGv_test_para.ShowCellErrors = false;
@@ -497,14 +545,14 @@
             this.dGv_test_para.ShowEditingIcon = false;
             this.dGv_test_para.ShowRowErrors = false;
             this.dGv_test_para.Size = new System.Drawing.Size(888, 55);
-            this.dGv_test_para.TabIndex = 64;
+            this.dGv_test_para.TabIndex = 75;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle27.Format = "N0";
-            dataGridViewCellStyle27.NullValue = null;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn1.HeaderText = "工作模式";
             this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -515,9 +563,9 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewCellStyle28.Format = "N0";
-            dataGridViewCellStyle28.NullValue = null;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTextBoxColumn2.HeaderText = "油缸位置";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
@@ -527,9 +575,9 @@
             // 
             // dataGridViewTextBoxColumn3
             // 
-            dataGridViewCellStyle29.Format = "N1";
-            dataGridViewCellStyle29.NullValue = null;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle4.Format = "N1";
+            dataGridViewCellStyle4.NullValue = null;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTextBoxColumn3.HeaderText = "压力1";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
@@ -539,8 +587,8 @@
             // 
             // dataGridViewTextBoxColumn4
             // 
-            dataGridViewCellStyle30.Format = "N1";
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle5.Format = "N1";
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn4.HeaderText = "压力2";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
@@ -550,8 +598,8 @@
             // 
             // dataGridViewTextBoxColumn5
             // 
-            dataGridViewCellStyle31.Format = "N1";
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle6.Format = "N1";
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn5.HeaderText = "压力3";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
@@ -561,8 +609,8 @@
             // 
             // dataGridViewTextBoxColumn6
             // 
-            dataGridViewCellStyle32.Format = "N1";
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle7.Format = "N1";
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewTextBoxColumn6.HeaderText = "压力4";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
@@ -572,8 +620,8 @@
             // 
             // dataGridViewTextBoxColumn7
             // 
-            dataGridViewCellStyle33.Format = "N1";
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle8.Format = "N1";
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewTextBoxColumn7.HeaderText = "压力5";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
@@ -583,8 +631,8 @@
             // 
             // dataGridViewTextBoxColumn8
             // 
-            dataGridViewCellStyle34.Format = "N1";
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle9.Format = "N1";
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewTextBoxColumn8.HeaderText = "压力6";
             this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
@@ -594,8 +642,8 @@
             // 
             // dataGridViewTextBoxColumn9
             // 
-            dataGridViewCellStyle35.Format = "N1";
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle10.Format = "N1";
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewTextBoxColumn9.HeaderText = "压力7";
             this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
@@ -605,8 +653,8 @@
             // 
             // dataGridViewTextBoxColumn10
             // 
-            dataGridViewCellStyle36.Format = "N1";
-            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle11.Format = "N1";
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewTextBoxColumn10.HeaderText = "电池";
             this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
@@ -616,8 +664,8 @@
             // 
             // dataGridViewTextBoxColumn11
             // 
-            dataGridViewCellStyle37.Format = "N1";
-            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle12.Format = "N1";
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewTextBoxColumn11.HeaderText = "温度";
             this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
@@ -628,10 +676,10 @@
             // btn_testTimeRead
             // 
             this.btn_testTimeRead.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_testTimeRead.Location = new System.Drawing.Point(432, 49);
+            this.btn_testTimeRead.Location = new System.Drawing.Point(427, 39);
             this.btn_testTimeRead.Name = "btn_testTimeRead";
             this.btn_testTimeRead.Size = new System.Drawing.Size(123, 38);
-            this.btn_testTimeRead.TabIndex = 63;
+            this.btn_testTimeRead.TabIndex = 74;
             this.btn_testTimeRead.Text = "仪器时间读取";
             this.btn_testTimeRead.UseVisualStyleBackColor = true;
             this.btn_testTimeRead.Click += new System.EventHandler(this.Btn_testTimeRead_Click);
@@ -640,19 +688,19 @@
             // 
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label53.Location = new System.Drawing.Point(29, 36);
+            this.label53.Location = new System.Drawing.Point(24, 26);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(122, 21);
-            this.label53.TabIndex = 54;
+            this.label53.TabIndex = 67;
             this.label53.Text = "测试通信串口：";
             // 
             // btn_testTimeSync
             // 
             this.btn_testTimeSync.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_testTimeSync.Location = new System.Drawing.Point(589, 49);
+            this.btn_testTimeSync.Location = new System.Drawing.Point(584, 39);
             this.btn_testTimeSync.Name = "btn_testTimeSync";
             this.btn_testTimeSync.Size = new System.Drawing.Size(123, 38);
-            this.btn_testTimeSync.TabIndex = 62;
+            this.btn_testTimeSync.TabIndex = 73;
             this.btn_testTimeSync.Text = "仪器时间同步";
             this.btn_testTimeSync.UseVisualStyleBackColor = true;
             this.btn_testTimeSync.Click += new System.EventHandler(this.Btn_testTimeSync_Click);
@@ -660,10 +708,10 @@
             // btn_PortOpen4
             // 
             this.btn_PortOpen4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_PortOpen4.Location = new System.Drawing.Point(264, 32);
+            this.btn_PortOpen4.Location = new System.Drawing.Point(259, 22);
             this.btn_PortOpen4.Name = "btn_PortOpen4";
             this.btn_PortOpen4.Size = new System.Drawing.Size(79, 28);
-            this.btn_PortOpen4.TabIndex = 55;
+            this.btn_PortOpen4.TabIndex = 68;
             this.btn_PortOpen4.Text = "打开";
             this.btn_PortOpen4.UseVisualStyleBackColor = true;
             this.btn_PortOpen4.Click += new System.EventHandler(this.btn_PortOpen4_Click);
@@ -671,10 +719,10 @@
             // btn_testCMDSend
             // 
             this.btn_testCMDSend.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn_testCMDSend.Location = new System.Drawing.Point(264, 76);
+            this.btn_testCMDSend.Location = new System.Drawing.Point(259, 66);
             this.btn_testCMDSend.Name = "btn_testCMDSend";
             this.btn_testCMDSend.Size = new System.Drawing.Size(79, 28);
-            this.btn_testCMDSend.TabIndex = 59;
+            this.btn_testCMDSend.TabIndex = 72;
             this.btn_testCMDSend.Text = "发送";
             this.btn_testCMDSend.UseVisualStyleBackColor = true;
             this.btn_testCMDSend.Click += new System.EventHandler(this.Btn_testCMDSend_Click);
@@ -682,11 +730,11 @@
             // combo_PortSel4
             // 
             this.combo_PortSel4.FormattingEnabled = true;
-            this.combo_PortSel4.Location = new System.Drawing.Point(158, 29);
+            this.combo_PortSel4.Location = new System.Drawing.Point(153, 19);
             this.combo_PortSel4.Margin = new System.Windows.Forms.Padding(4);
             this.combo_PortSel4.Name = "combo_PortSel4";
-            this.combo_PortSel4.Size = new System.Drawing.Size(72, 30);
-            this.combo_PortSel4.TabIndex = 56;
+            this.combo_PortSel4.Size = new System.Drawing.Size(72, 28);
+            this.combo_PortSel4.TabIndex = 69;
             // 
             // combo_testCMD
             // 
@@ -699,21 +747,22 @@
             "环腔升压",
             "环腔泄压",
             "仪器休眠",
-            "坐封步进"});
-            this.combo_testCMD.Location = new System.Drawing.Point(126, 76);
+            "坐封步进",
+            "信标开启"});
+            this.combo_testCMD.Location = new System.Drawing.Point(121, 66);
             this.combo_testCMD.Margin = new System.Windows.Forms.Padding(4);
             this.combo_testCMD.Name = "combo_testCMD";
-            this.combo_testCMD.Size = new System.Drawing.Size(104, 30);
-            this.combo_testCMD.TabIndex = 58;
+            this.combo_testCMD.Size = new System.Drawing.Size(104, 28);
+            this.combo_testCMD.TabIndex = 71;
             // 
             // label54
             // 
             this.label54.AutoSize = true;
             this.label54.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label54.Location = new System.Drawing.Point(29, 78);
+            this.label54.Location = new System.Drawing.Point(24, 68);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(90, 21);
-            this.label54.TabIndex = 57;
+            this.label54.TabIndex = 70;
             this.label54.Text = "指令选择：";
             // 
             // tabPage3
@@ -774,8 +823,68 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.chart1);
             this.splitContainer1.Size = new System.Drawing.Size(976, 433);
-            this.splitContainer1.SplitterDistance = 151;
+            this.splitContainer1.SplitterDistance = 150;
             this.splitContainer1.TabIndex = 9;
+            // 
+            // textBox_Temp
+            // 
+            this.textBox_Temp.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_Temp.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.textBox_Temp.Location = new System.Drawing.Point(837, 31);
+            this.textBox_Temp.Name = "textBox_Temp";
+            this.textBox_Temp.ReadOnly = true;
+            this.textBox_Temp.Size = new System.Drawing.Size(50, 29);
+            this.textBox_Temp.TabIndex = 29;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label5.Location = new System.Drawing.Point(890, 34);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(26, 22);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "℃";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(763, 34);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 22);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "温度：";
+            // 
+            // textBox_VBAT
+            // 
+            this.textBox_VBAT.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox_VBAT.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.textBox_VBAT.Location = new System.Drawing.Point(837, 66);
+            this.textBox_VBAT.Name = "textBox_VBAT";
+            this.textBox_VBAT.ReadOnly = true;
+            this.textBox_VBAT.Size = new System.Drawing.Size(50, 29);
+            this.textBox_VBAT.TabIndex = 26;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(890, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(21, 22);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "V";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Location = new System.Drawing.Point(763, 69);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 22);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "电池：";
             // 
             // textBox_P7
             // 
@@ -1027,75 +1136,75 @@
             // 
             // chart1
             // 
-            chartArea3.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
-            chartArea3.AxisX.IsLabelAutoFit = false;
-            chartArea3.AxisX.LabelAutoFitMaxFontSize = 12;
-            chartArea3.AxisX.LabelAutoFitMinFontSize = 10;
-            chartArea3.AxisX.LabelStyle.Format = "HH:mm:ss";
-            chartArea3.AxisX.LabelStyle.Interval = 0D;
-            chartArea3.AxisX.LabelStyle.IntervalOffset = 0D;
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea3.AxisX.MaximumAutoSize = 95F;
-            chartArea3.AxisY.LabelAutoFitMaxFontSize = 12;
-            chartArea3.AxisY.LabelAutoFitMinFontSize = 10;
-            chartArea3.AxisY.LabelStyle.Angle = 30;
-            chartArea3.AxisY.LabelStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisY.LabelStyle.Interval = 5D;
-            chartArea3.AxisY.LabelStyle.IntervalOffset = 0D;
-            chartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
-            chartArea3.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            chartArea3.AxisY.Maximum = 25D;
-            chartArea3.AxisY.MaximumAutoSize = 10F;
-            chartArea3.AxisY.Minimum = 0D;
-            chartArea3.AxisY.TitleFont = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea3.AxisY.ToolTip = "压力(MPa)";
-            chartArea3.CursorY.AutoScroll = false;
-            chartArea3.CursorY.Interval = 10D;
-            chartArea3.Name = "ChartArea1";
-            chartArea3.Position.Auto = false;
-            chartArea3.Position.Height = 94F;
-            chartArea3.Position.Width = 92F;
-            chartArea3.Position.Y = 2F;
-            this.chart1.ChartAreas.Add(chartArea3);
+            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
+            chartArea1.AxisX.IsLabelAutoFit = false;
+            chartArea1.AxisX.LabelAutoFitMaxFontSize = 12;
+            chartArea1.AxisX.LabelAutoFitMinFontSize = 10;
+            chartArea1.AxisX.LabelStyle.Format = "HH:mm:ss";
+            chartArea1.AxisX.LabelStyle.Interval = 0D;
+            chartArea1.AxisX.LabelStyle.IntervalOffset = 0D;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea1.AxisX.MaximumAutoSize = 95F;
+            chartArea1.AxisY.LabelAutoFitMaxFontSize = 12;
+            chartArea1.AxisY.LabelAutoFitMinFontSize = 10;
+            chartArea1.AxisY.LabelStyle.Angle = 30;
+            chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.LabelStyle.Interval = 5D;
+            chartArea1.AxisY.LabelStyle.IntervalOffset = 0D;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.LightGray;
+            chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
+            chartArea1.AxisY.Maximum = 25D;
+            chartArea1.AxisY.MaximumAutoSize = 10F;
+            chartArea1.AxisY.Minimum = 0D;
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.ToolTip = "压力(MPa)";
+            chartArea1.CursorY.AutoScroll = false;
+            chartArea1.CursorY.Interval = 10D;
+            chartArea1.Name = "ChartArea1";
+            chartArea1.Position.Auto = false;
+            chartArea1.Position.Height = 94F;
+            chartArea1.Position.Width = 92F;
+            chartArea1.Position.Y = 2F;
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.AutoFitMinFontSize = 8;
-            legend3.IsDockedInsideChartArea = false;
-            legend3.ItemColumnSpacing = 10;
-            legend3.MaximumAutoSize = 10F;
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            legend1.AutoFitMinFontSize = 8;
+            legend1.IsDockedInsideChartArea = false;
+            legend1.ItemColumnSpacing = 10;
+            legend1.MaximumAutoSize = 10F;
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Margin = new System.Windows.Forms.Padding(0);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series7.BorderWidth = 2;
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series7.Color = System.Drawing.Color.Magenta;
-            series7.Legend = "Legend1";
-            series7.LegendText = "上游压力";
-            series7.Name = "Series1";
-            series7.ToolTip = "压力1";
-            series7.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
-            series8.BorderWidth = 2;
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series8.Color = System.Drawing.Color.Lime;
-            series8.Legend = "Legend1";
-            series8.LegendText = "环腔压力";
-            series8.Name = "Series2";
-            series9.BorderWidth = 2;
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series9.Color = System.Drawing.Color.Blue;
-            series9.Legend = "Legend1";
-            series9.LegendText = "下游压力";
-            series9.Name = "Series3";
-            this.chart1.Series.Add(series7);
-            this.chart1.Series.Add(series8);
-            this.chart1.Series.Add(series9);
-            this.chart1.Size = new System.Drawing.Size(976, 278);
+            series1.BorderWidth = 2;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series1.Color = System.Drawing.Color.Magenta;
+            series1.Legend = "Legend1";
+            series1.LegendText = "上游压力";
+            series1.Name = "Series1";
+            series1.ToolTip = "压力1";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Time;
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series2.Color = System.Drawing.Color.Lime;
+            series2.Legend = "Legend1";
+            series2.LegendText = "环腔压力";
+            series2.Name = "Series2";
+            series3.BorderWidth = 2;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series3.Color = System.Drawing.Color.Blue;
+            series3.Legend = "Legend1";
+            series3.LegendText = "下游压力";
+            series3.Name = "Series3";
+            this.chart1.Series.Add(series1);
+            this.chart1.Series.Add(series2);
+            this.chart1.Series.Add(series3);
+            this.chart1.Size = new System.Drawing.Size(976, 279);
             this.chart1.TabIndex = 4;
             this.chart1.Text = "chart1";
             // 
@@ -1332,9 +1441,9 @@
             // tabPage4
             // 
             this.tabPage4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(976, 629);
+            this.tabPage4.Size = new System.Drawing.Size(976, 636);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = " 测 后 处 理 ";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1347,66 +1456,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // textBox_VBAT
-            // 
-            this.textBox_VBAT.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_VBAT.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox_VBAT.Location = new System.Drawing.Point(837, 66);
-            this.textBox_VBAT.Name = "textBox_VBAT";
-            this.textBox_VBAT.ReadOnly = true;
-            this.textBox_VBAT.Size = new System.Drawing.Size(50, 29);
-            this.textBox_VBAT.TabIndex = 26;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(890, 69);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 22);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "V";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(763, 69);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 22);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "电池：";
-            // 
-            // textBox_Temp
-            // 
-            this.textBox_Temp.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_Temp.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBox_Temp.Location = new System.Drawing.Point(837, 31);
-            this.textBox_Temp.Name = "textBox_Temp";
-            this.textBox_Temp.ReadOnly = true;
-            this.textBox_Temp.Size = new System.Drawing.Size(50, 29);
-            this.textBox_Temp.TabIndex = 29;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(890, 34);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 22);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "℃";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(763, 34);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 22);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "温度：";
             // 
             // FrmMain
             // 
@@ -1421,15 +1470,15 @@
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.tab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dGv_test_Config)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGv_test_para)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -1499,40 +1548,6 @@
         private System.Windows.Forms.TextBox textBox_P2;
         private System.Windows.Forms.TextBox textBox_P1;
         private System.Windows.Forms.TextBox textBox_P6;
-        private System.Windows.Forms.ComboBox combo_PortSel4;
-        private System.Windows.Forms.Button btn_PortOpen4;
-        private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Button btn_testCMDSend;
-        private System.Windows.Forms.ComboBox combo_testCMD;
-        private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Button btn_testTimeSync;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button btn_testTimeRead;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.ComboBox combo_PortSel3;
-        private System.Windows.Forms.Button btn_PortOpen3;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.ComboBox combo_PortSel2;
-        private System.Windows.Forms.ComboBox combo_PortSel1;
-        private System.Windows.Forms.Button btn_PortOpen2;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Button btn_PortOpen1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dGv_test_para;
-        private System.Windows.Forms.Button btn_testAutoUpdate;
-        private System.Windows.Forms.Button btn_testFileClear;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.Button btn_CMD7;
@@ -1551,6 +1566,43 @@
         private System.Windows.Forms.TextBox textBox_VBAT;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ComboBox combo_PortSel2;
+        private System.Windows.Forms.ComboBox combo_PortSel1;
+        private System.Windows.Forms.Button btn_PortOpen2;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Button btn_PortOpen1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.ComboBox combo_PortSel3;
+        private System.Windows.Forms.Button btn_PortOpen3;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Button btn_testCfgWrite;
+        private System.Windows.Forms.Button btn_testCfgRead;
+        private System.Windows.Forms.Button btn_testFileClear;
+        private System.Windows.Forms.Button btn_testAutoUpdate;
+        private System.Windows.Forms.DataGridView dGv_test_para;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.Button btn_testTimeRead;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Button btn_testTimeSync;
+        private System.Windows.Forms.Button btn_PortOpen4;
+        private System.Windows.Forms.Button btn_testCMDSend;
+        private System.Windows.Forms.ComboBox combo_PortSel4;
+        private System.Windows.Forms.ComboBox combo_testCMD;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.DataGridView dGv_test_Config;
+        private System.Windows.Forms.Button button1;
     }
 }
 

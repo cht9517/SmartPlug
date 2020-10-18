@@ -21,6 +21,8 @@ namespace SmartPlug
         FileStream fs_log = null;
         StreamWriter sw_log = null;
 
+        public const int CMD_BEACON_ON = 0x40;
+        public const int CMD_BEACON_OFF = 0x00;
         public const int CMD_MEASURE = 0x80;
         public const int CMD_PLUG = 0xE0;
         public const int CMD_PLUG_C = 0xE1;
@@ -41,13 +43,57 @@ namespace SmartPlug
 
         SplashScreen splash = new SplashScreen();
 
+        System.Data.DataTable table_toolcfg = new DataTable("ToolCfgTable");
+
+
+        private void ToolCfgTable_init()
+        {
+            table_toolcfg.Columns.Add(new DataColumn("name", System.Type.GetType("System.String")));
+            table_toolcfg.Columns.Add(new DataColumn("value", System.Type.GetType("System.Int32")));
+            table_toolcfg.Columns.Add(new DataColumn("remarks", System.Type.GetType("System.String")));
+            table_toolcfg.Columns[0].ReadOnly = true;
+            table_toolcfg.Columns[2].ReadOnly = true;
+
+            table_toolcfg.Rows.Add("封堵最大时间", 30, "秒，范围：10~600");
+            table_toolcfg.Rows.Add("解封最大时间", 30, "秒，范围：10~600");
+            table_toolcfg.Rows.Add("备用解封最大时间", 30, "秒，范围：10~600");
+            table_toolcfg.Rows.Add("环腔泄压最大时间", 30, "秒，范围：10~600");
+
+            table_toolcfg.Rows.Add("环腔升压最大时间",  10, "秒，范围：10~100");
+            table_toolcfg.Rows.Add("环腔升压最高压力", 100, "0.1MPa，范围：10~200");
+            table_toolcfg.Rows.Add("环腔升压压力增量",  10, "0.1MPa，范围：10~200");
+            table_toolcfg.Rows.Add("环腔升压保压时间",  10, "秒，范围：10~100");
+
+            table_toolcfg.Rows.Add("油缸位移最大设定", 105, "mm，范围：1~109");
+            table_toolcfg.Rows.Add("油缸位移最小设定", 5, "mm，范围：1~109");
+            table_toolcfg.Rows.Add("系统溢流压力设定(暂未用)", 210, "0.1MPa，范围：10~250");
+            table_toolcfg.Rows.Add("常规发射帧周期((暂未用)", 10, "秒，范围：10~30");
+            table_toolcfg.Rows.Add("空闲发射帧周期((暂未用)", 30, "秒，范围：20~120");
+
+            table_toolcfg.Rows.Add("信标停发循环次数", 20, "次，范围：20~500");
+            table_toolcfg.Rows.Add("坐封步进位移", 5, "mm，范围：5~50");
+            table_toolcfg.Rows.Add("溢流阀占空比设定", 65, "%，范围：0~100");
+
+            dGv_test_Config.DataSource = table_toolcfg;
+            dGv_test_Config.Columns[0].Width = 220;
+            dGv_test_Config.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dGv_test_Config.Columns[1].Width = 100;
+            dGv_test_Config.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dGv_test_Config.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            dGv_test_Config.AllowUserToResizeColumns = false;
+            dGv_test_Config.AllowUserToResizeRows = false;
+        }
+
         public FrmMain()
         {
             InitializeComponent();
 
             splash.Show();
-            System.Threading.Thread.Sleep(3000);
+            //System.Threading.Thread.Sleep(3000);
             splash.Close();
+
+            ToolCfgTable_init();
 
             Tsb.Instance.task_tsb_rx.Start();
 
@@ -246,7 +292,7 @@ namespace SmartPlug
 
         private void Btn_testCMDSend_Click(object sender, EventArgs e)
         {
-            byte[] code_buf = {0x80, 0xE0, 0xD0, 0x88, 0xC4, 0x82, 0x00, 0xF0};
+            byte[] code_buf = {0x80, 0xE0, 0xD0, 0x88, 0xC4, 0x82, 0x00, 0xF0, 0x40};
 
             int index = combo_testCMD.SelectedIndex;
 
@@ -332,7 +378,7 @@ namespace SmartPlug
             MessageBox.Show("仪器时间：" + string.Format("{0:F}", dt));
         }
 
-        private void Btn_testTimeRead_Click(object sender, EventArgs e)
+        private void Btn_testTimeRead_Click(object sender, EventArgs e)//读时间
         {
 
             if (Tsb.Instance.tsb_tx_frame(0x0f, 0x5b, null, read_test_time_cb))//诊断
@@ -357,7 +403,50 @@ namespace SmartPlug
             }
             MessageBox.Show("已下发时间：" + string.Format("{0:F}", System.DateTime.Now));
         }
+        
+        private void Read_test_cfg_cb(int com_id)
+        {
+            for(int i=0; i<16; i++)
+            {
+                int val = ((Tsb.rx_msg_buf[com_id, 8 + 2 * i] & 0xff) << 8)
+                            + (Tsb.rx_msg_buf[com_id, 9 + 2 * i] & 0xff);
+                table_toolcfg.Rows[i].SetField("value", val);
+            }
 
+            System.Media.SystemSounds.Beep.Play();
+        }
+
+        private void Btn_testCfgRead_Click(object sender, EventArgs e)//读取配置参数
+        {
+            if (Tsb.Instance.tsb_tx_frame(0x0f, 0x5b, null, Read_test_cfg_cb))//诊断
+            {
+                ;
+            }
+        }
+        private void Write_test_cfg_cb(int com_id)
+        {
+            MessageBox.Show("已成功写入配置！");
+        }
+
+            private void Btn_testCfgWrite_Click(object sender, EventArgs e)//写入配置参数
+        {
+            byte[] para_buf = new byte[32];
+
+            for(int i=0; i<16; i++)
+            {
+                int val = (int)(table_toolcfg.Rows[i]["value"]);
+                para_buf[2 * i + 0] = (byte)(val >> 8);
+                para_buf[2 * i + 1] = (byte)(val & 0xFF);
+            }
+
+            if (Tsb.Instance.tsb_tx_frame(0x0f, 0xad, para_buf, Write_test_cfg_cb))
+            {
+            }
+            else
+            {
+                MessageBox.Show("下发命令失败！");
+            }
+        }
 
         private void CMD_Perform(int cmd, string cmd_name)
         {
@@ -520,7 +609,7 @@ namespace SmartPlug
             this.Invoke(new Action(() =>
             {
                 //buf[2]:Mode
-                textBox_S1.Text = string.Format("{0:f1}", buf[3] / 2.0);
+                textBox_S1.Text = string.Format("{0:f1}", buf[3] / 1.0);
                 textBox_P1.Text = string.Format("{0:f1}", buf[4] / 10.0);
                 textBox_P2.Text = string.Format("{0:f1}", buf[5] / 10.0);
                 textBox_P3.Text = string.Format("{0:f1}", buf[6] / 10.0);
@@ -558,9 +647,9 @@ namespace SmartPlug
             {
                 anchor_OK = true;
 
-                int rssi = (int)( ((buf[1] & 0xff) << 16) + ((buf[2] & 0xff) << 8) + (buf[3] & 0xff));
+                int rssi = (int)(buf[2] & 0xff);
 
-                toolStripStatusLabel1.Text = string.Format("信号强度：{0:f1}dB", rssi / 1000.0);
+                toolStripStatusLabel1.Text = string.Format("信号强度：{0:f1}%", rssi * 100.0 / 256 );
 
                 toolStripProgressBar1.Value = 40;
 
@@ -578,9 +667,9 @@ namespace SmartPlug
             {
                 anchor_OK = false;
 
-                int rssi = (int)(((buf[1] & 0xff) << 16) + ((buf[2] & 0xff) << 8) + (buf[3] & 0xff));
+                int rssi = (int)(buf[2] & 0xff);
 
-                toolStripStatusLabel1.Text = string.Format("信号强度：{0:f1}dB", rssi / 1000.0);
+                toolStripStatusLabel1.Text = string.Format("信号强度：{0:f1}%", rssi * 100.0 / 256);
 
                 toolStripProgressBar1.Value = 0;
 
@@ -609,6 +698,10 @@ namespace SmartPlug
             }
 
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CMD_Perform(CMD_BEACON_ON, "《信标开启》");
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -618,17 +711,17 @@ namespace SmartPlug
         private void button2_Click(object sender, EventArgs e)
         {
             byte[] buf = new byte[5];
-            buf[1] = 0;
-            buf[2] = 0;
-            buf[3] = 23;
+            buf[1] = 1;
+            buf[2] = 32;
+            buf[3] = 30;
             onBeacon_Rx_up(buf);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             byte[] buf = new byte[5];
-            buf[1] = 0;
-            buf[2] = 0;
+            buf[1] = 1;
+            buf[2] = 10;
             buf[3] = 36;
             onBeacon_Rx_down(buf);
         }
@@ -654,9 +747,6 @@ namespace SmartPlug
             }
         }
 
-        private void Button7_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }
