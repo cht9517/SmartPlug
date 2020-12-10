@@ -24,9 +24,9 @@ namespace SmartPlug
         public const int CMD_BEACON_ON = 0x40;
         public const int CMD_BEACON_OFF = 0x00;
         public const int CMD_MEASURE = 0x80;
-        public const int CMD_PLUG = 0xE0;
+        public const int CMD_PLUG = 0xD0;//命令对调
         public const int CMD_PLUG_C = 0xE1;
-        public const int CMD_UNPLUG = 0xD0;
+        public const int CMD_UNPLUG = 0xE0;
         public const int CMD_UNPLUG_S = 0x88;
         public const int CMD_RING_COMPRESS = 0xC4;
         public const int CMD_RING_DECOMPRESS = 0x82;
@@ -373,7 +373,7 @@ namespace SmartPlug
                        + ((Tsb.rx_msg_buf[com_id, 42] & 0xff) << 8)
                        +  (Tsb.rx_msg_buf[com_id, 43] & 0xff);
 
-            DateTime dt = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1)).AddSeconds(time);
+            DateTime dt = (new DateTime(1970, 1, 1)).AddSeconds(time);
 
             MessageBox.Show("仪器时间：" + string.Format("{0:F}", dt));
         }
@@ -389,7 +389,7 @@ namespace SmartPlug
 
         private void Btn_testTimeSync_Click(object sender, EventArgs e)
         {
-            uint time = (uint)((DateTime.Now.ToUniversalTime().Ticks - 621355968000000000) / 10000000);
+            uint time = (uint)((DateTime.Now.ToLocalTime().Ticks - 621355968000000000) / 10000000);
 
             byte[] para_buf = new byte[8];
             para_buf[4] = (byte)((time >> 24) & 0xff);
@@ -609,7 +609,11 @@ namespace SmartPlug
             this.Invoke(new Action(() =>
             {
                 //buf[2]:Mode
+                toolStripStatusLabel5.Text = "仪器状态码：0x" + String.Format("{0:X}", buf[2]);
+
                 textBox_S1.Text = string.Format("{0:f1}", buf[3] / 1.0);
+
+                
                 textBox_P1.Text = string.Format("{0:f1}", buf[4] / 10.0);
                 textBox_P2.Text = string.Format("{0:f1}", buf[5] / 10.0);
                 textBox_P3.Text = string.Format("{0:f1}", buf[6] / 10.0);
@@ -628,7 +632,7 @@ namespace SmartPlug
                 {
                     ;
                 }
-
+                
                 DateTime t = DateTime.Now;
                 chart1.Series[0].Points.AddXY(t.ToOADate(), buf[7] / 10.0);
                 chart1.Series[1].Points.AddXY(t.ToOADate(), buf[8] / 10.0);

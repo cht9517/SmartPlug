@@ -158,8 +158,16 @@ namespace SmartPlug
         {
             Thread.Sleep(5000);
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 10; i++)
                 rx_msg_buf[i] = (byte)(id_cnt++ & 0xFF);
+
+            id_cnt -= 9;
+            rx_msg_buf[2] = 0x80;
+            rx_msg_buf[9] = (byte)(rx_msg_buf[8] - 8);
+            rx_msg_buf[10] = 0;
+            rx_msg_buf[11] = 252;
+            rx_msg_buf[12] = 52;
+
 
             on_TSB_s_rx(rx_msg_buf);
         }
